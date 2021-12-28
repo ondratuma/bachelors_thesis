@@ -1,0 +1,13 @@
+{
+    "tasks": [
+        {
+          "label": "save",
+          "type": "shell",
+          "command": "./sources/build.sh",
+          "presentation": {
+            "reveal": "silent",
+            "panel": "shared"
+          }
+        }
+      ]
+}

@@ -1,0 +1,48 @@
+\def \kulich {RNDr. Miroslav Kulich, Ph.D.}
+\def \mapfIR {\ulink[https://github.com/Kei18/mapf-IR]{mapf-IR}}
+
+\input ctustyle2
+\worktype [B/CZ]
+\faculty {F3}
+\department {Katedra kybernetiky}
+\title {Demonstrátor systému plánování pro více agentů}
+\author {Tůma Ondřej}
+\supervisor {\kulich}
+
+
+\date {Prosinec 2021}
+
+\abstractEN {This document is for testing purpose only.}
+\abstractCZ {Tato práce analyzuje možnosti a rozšiřuje demonstrátor multiagentních systémů.}
+\thanks {Chtěl bych poděkovat především vedoucímu práce \kulich za skvělé uvedení do problematiky a za konzultace, které byly nezbytně nutné pro dokončení projektu.}
+\declaration {Prohlašuji, že jsem předloženou práci vypracoval samostatná a že jsem uvedl veškeré
+použité informační zdroje v souladu s Metodickým pokynem o dodržování etických principů při přípravě vysokoškolských závěrečných prací.}
+\makefront
+
+
+
+\chap Úvod
+
+Text úvodu.
+
+\sec Myšlenka
+
+Aktuálně používaný software k multiagentní simulaci umožňuje spouštění předem vygenerovaného plánu na fyzických robotech. Myšlenkou této práce je vylepšit stávající software tak, aby:
+\begitems \style n
+    * Umožňoval čistě virtuální běh
+    * Měl GUI, které zobrazí feedback od robotů.
+    * Standardizovat vstupní formát s \mapfIR
+\enditems
+
+\sec Zadání práce
+V rámci řešení EU projektu SafeLog vznikl laboratorní demonstrátor s roboty TurtleBot pro plánování trajektorií pro skupinu robotů v automatizovaném skladu. V semestrálním projektu je cílem se seznámit s tímto prostředím a toto dále rozvíjet. Konkrétní postup je následující:
+
+
+\begitems \style n
+    * Seznámit se s aktuální stavem vývoje demonstrátoru a se simulátorem pro multi-agentní plánování \mapfIR.
+    * Upravit simulátor tak, aby sloužil jako základní uživatelské rozhraní (GUI) demonstrátoru.
+    * Zobrazovat pozice robotů získané ze systému Vicon v GUI.
+    * Integrovat dodané komponenty pro plánování a generování plánů do systému.
+\enditems
+\bye
+\endtt
