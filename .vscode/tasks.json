@@ -8,6 +8,9 @@
           "presentation": {
             "reveal": "silent",
             "panel": "shared"
+          },
+          "options": {
+            "cwd": "${workspaceFolder}"
           }
         }
       ]
