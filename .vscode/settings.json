@@ -1,7 +1,9 @@
 {
     "triggerTaskOnSave.tasks": {
         "save": [
-            "index.tex"
+            "*.tex",
+            "*.json",
+            "*.sh"
         ]
     }
 }
