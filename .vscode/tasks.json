@@ -3,7 +3,7 @@
         {
           "label": "save",
           "type": "shell",
-          "command": "./sources/build.sh",
+          "command": "./help/build.sh",
           "presentation": {
             "reveal": "silent",
             "panel": "shared"
