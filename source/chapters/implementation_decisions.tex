@@ -10,8 +10,9 @@ The primary decision was that we were to keep this build system for the server p
 \sec GUI library considerations 
 The primary candidate for GUI library was {\of}. It provides extensive amount of addons ranging greatly in functionality, with the pros being mainly:
 \begitems \style n
-    * Provides event loop synchronized with framerate
+    * Event loop synchronized with framerate
     * Interacting with the canvas using framework apis
-    * Provides rich set of GUI widgets (buttons, text fields, etc.)
+    * Rich set of GUI widgets (buttons, text fields, etc.)
 \enditems
 with the only downside being it's dependence on \makefile. Therefore we are not able to use the official version with our build system.
+
