@@ -4,30 +4,3 @@ In this chapter I will describe my implementation and the particular solutions u
 \sec GUI application
 The GUI is implemented using {\of}. 
 
-\label[choosing_gui]
-\sec GUI library considerations 
-The primary candidate for GUI library was {\of}. It provides extensive amount of addons ranging greatly in functionality, with the pros being mainly:
-\begitems \style n
-    * Event loop synchronized with framerate
-    * Interacting with the canvas using framework apis
-    * Rich set of GUI widgets (buttons, text fields, etc.)
-\enditems
-with the only downside being it's dependence on \makefile. Therefore we are not able to use the official version with our build system.
-
-The developers are rather defensive about migrating build systems. The recommended way of building {\of} app is to clone the official repository, create app using their template, and extend the makefiles provided by the original repository. In order to be able to use this project with \cmake, it would be necessary to create header map for each component of the framework.
-
-\hfill \break
-There appear to be a few attempts to do this. Unfortunately, the wast majority of them is out of date and unusable without heavy modifications.
-
-\def \ofxCMake {\ulink[https://github.com/Kei18/mapf-IR]{ofxCMake}}
-\def \ofnode {\ulink[https://github.com/Kei18/mapf-IR]{ofnode}}
-
-The first one being \ofxCMake. Its attempt is to provide the package as {\of} addon. Unfortunately, the latest version is from Aug 13, 2017, and there seems to be no active development keeping it in sync. 
-
-Another one being \ofnode, taking different approach. It has its own fork of {\of} repository, with mappings for {\cmake}. The latest version is from on Nov 7, 2018. I ran into several issues with system libraries with this version and was not able to compile even the bare repository.
-It was then decided, that it would be most beneficial to split the GUI into separate application using the {\makefile}.
-
-\sec GUI implementation considerations
-First aspect was speed. The simulation might run hundreds of robots, depending on the simulation. So on each robot move, it is necessary to send the minimal amount of information required in order to keep the latency to a minimum. 
-It was the decided, that the plan will be synchronized between both applications on simulation start or plan change. Any messages regarding the robot positions will be strictly referring to the synchronized plan.
-Second aspect was ease-of-development. It is necessary to create enough abstraction for the developer not to have to worry about the network. A set of abstraction allowing to share messages and state in asynchronous manner will be necessary. Ideally, the developer should not care whether the apps are running in different threads or processes, the api should remain the same.
