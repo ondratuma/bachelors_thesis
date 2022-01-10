@@ -2,4 +2,5 @@ cd build && pdfcsplain index && mv index.pdf ../output && cd ..
 git add .
 git rm --cached index.pdf
 git commit -m "date"
-LINE_COUNT=$(pdftotext output/index.pdf - | wc -w)
+WORD_COUNT=$(pdftotext output/index.pdf - | wc -w)
+echo ""
