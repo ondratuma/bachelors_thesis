@@ -1,0 +1,126 @@
+CZECH TECHNICAL
+UNIVERSITY
+IN PRAGUE
+
+F3
+
+Faculty of Electrical Engineering
+Department of Cybernetics
+
+Semestral project
+
+Multiagent planning system
+demonstrator
+Tůma Ondřej
+
+Prosinec 2021
+Supervisor: RNDr. Miroslav Kulich, Ph.D.
+
+Acknowledgement / Declaration
+Chtěl bych poděkovat především vedoucímu práce RNDr. Miroslav Kulich,
+Ph.D.za skvělé uvedení do problematiky
+a za konzultace, které byly nezbytně
+nutné pro dokončení projektu.
+
+Prohlašuji, že jsem předloženou práci
+vypracoval samostatná a že jsem uvedl
+veškeré použité informační zdroje v
+souladu s Metodickým pokynem o dodržování etických principů při přípravě
+vysokoškolských závěrečných prací.
+
+iii
+
+Abstrakt / Abstract
+Tato práce analyzuje možnosti a rozšiřuje demonstrátor multiagentních systémů.
+
+This work is analyzing and improving
+upon the multiagent planning system
+demonstrator currently used at the
+Department of Cybernetics. The main
+objective is to improve existing funccionality, add new features and enable
+the usage of mapf-IR format. It will
+greatly improve developer experience
+for other students working and running
+simulations developing alhorithms for
+the mapf-IR solver.
+
+iv
+
+/ Contents
+1 Úvod . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .1
+
+1.1 Myšlenka . . . . . . . . . . . . . . . . . . . . . . . . .1
+1.2 Original assignment . . . . . . . . . . . . . .1
+1.3 Demonstrator current state
+analysis . . . . . . . . . . . . . . . . . . . . . . . . . . .1
+1.4 Vision. . . . . . . . . . . . . . . . . . . . . . . . . . . . .2
+
+v
+
+Chapter
+Úvod
+
+1
+
+Text úvodu.
+
+1.1
+
+Myšlenka
+
+Aktuálně používaný software k multiagentní simulaci umožňuje spouštění předem vygenerovaného plánu na fyzických robotech. Myšlenkou této práce je vylepšit stávající
+software tak, aby:
+1. Umožňoval čistě virtuální běh
+2. Měl GUI, které zobrazí feedback od robotů.
+3. Standardizovat vstupní formát s mapf-IR
+
+1.2
+
+Original assignment
+
+In collaboration with SafeLog, the laboratory demonstrator TurtleBot was created for
+robot fleet trajectory planning in automated warehouses. The goal of this semestral
+project is to analyze this framework and improve upon its codebase. The tasks are as
+follows:
+1. Analyze multi-agent demonstrator and simulator mapf-IR and its current state of
+development
+2. Edit the simulator to serve as basic user interface for demonstrator (GUI)
+3. Display robot positions received from the Vicon system
+4. Integrate componenets for planning and generating plans into the system.
+
+1.3
+
+Demonstrator current state analysis
+
+Currently, there exists old version of this project, that enables only basic functionality
+for the simulations. This maily includes:
+1. Loading generated simulation data (in proprietary format)
+2. Sending commands in predefined order to the robots
+It does the basics necessary to run the simulation. But it does not enable the user to
+adjust or view the result. The old version receives feedback from robots after command
+execution. It has no continuous data about the robots real-world positions. If collision
+happens between two robots, the old version has no way of detecting and adjusting the
+robots paths.
+Current proprietary format is not compatible with mapf-IR input nor ouput format,
+which makes the software at its current state useless for students developing algorithms
+for the mentioned solver. And great amount of effort is required for students to run a
+simulation using this software, if they happened to be working with compatible format.
+1
+
+1. Úvod
+
+.............................................
+
+1.4
+
+Vision
+
+Aktuálně používaný software k multiagentní simulaci umožňuje spouštění předem vygenerovaného plánu na fyzických robotech. Myšlenkou této práce je vylepšit stávající
+software tak, aby:
+1. Umožňoval čistě virtuální běh
+2. Měl GUI, které zobrazí feedback od robotů.
+3. Standardizovat vstupní formát s mapf-IR
+
+2
+
+
