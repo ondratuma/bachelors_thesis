@@ -31,5 +31,5 @@ It was then decided, that it would be most beneficial to split the GUI into sepa
 
 \sec GUI implementation considerations
 First aspect was speed. The simulation might run hundreds of robots, depending on the simulation. So on each robot move, it is necessary to send the minimal amount of information required in order to keep the latency to a minimum. 
-It was the decided, that the plan will be synchronized on both ends on simulation start or plan change. Any messages regarding the robot positions will be strictly referring to the synchronized plan.
+It was the decided, that the plan will be synchronized between both applications on simulation start or plan change. Any messages regarding the robot positions will be strictly referring to the synchronized plan.
 Second aspect was ease-of-development. It is necessary to create enough abstraction for the developer not to have to worry about the network. A set of abstraction allowing to share messages and state in asynchronous manner will be necessary. Ideally, the developer should not care whether the apps are running in different threads or processes, the api should remain the same.
