@@ -16,7 +16,7 @@ The primary candidate for GUI library was {\of}. It provides extensive amount of
 \enditems
 with the only downside being it's dependence on \makefile. Therefore we are not able to use the official version with our build system.
 
-There are unofficial forks of this project trying to add support for \cmake.
+The developers are rather defensive about migrating build systems. The recommended way of building {\of} app is to clone the official repository, create app using their template, and extend the makefiles provided by the original repository. In order to be able to use this project with \cmake, it would be necessary to create header map for each component of the framework.
 
 \def \ofxCMake {\ulink[https://github.com/Kei18/mapf-IR]{ofxCMake}}
-The first one is \ofxCMake
+The first one is \ofxCMake. Its attempt is to provide the package as {\of} addon. Unfortunately, the latest version is from Aug 13, 2017, and there seems to be no active development keeping it in sync.
