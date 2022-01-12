@@ -5,7 +5,7 @@ cd build && pdfcsplain "$ROOT_FILE" && mv "${OUTPUT_FILE}.pdf" ../output && cd .
 git add .
 git rm --cached "${OUTPUT_FILE}.pdf"
 git commit -m "date"
-CHAR_COUNT=$(pdftotext -f $FIRST_PAGE_TO_COUNT "output/${OUTPUT_FILE}.pdf" - | set 's/^ *//g' | wc -m)
+CHAR_COUNT=$(pdftotext -f $FIRST_PAGE_TO_COUNT "output/${OUTPUT_FILE}.pdf" - | sed 's/^ *//g' | wc -m)
 WORD_COUNT=$(pdftotext -f $FIRST_PAGE_TO_COUNT "output/${OUTPUT_FILE}.pdf" - | wc -w)
 echo "---------------------------------------------------------------"
 echo "CONVERTED"
