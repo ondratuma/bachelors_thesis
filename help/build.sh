@@ -6,7 +6,7 @@ git add .
 git rm --cached "${OUTPUT_FILE}.pdf"
 git commit -m "date"
 TEXT=$(pdftotext "output/${OUTPUT_FILE}.pdf" -)
-CHAR_COUNT=$($TEXT | wc -m)
+CHAR_COUNT=$(echo $TEXT | wc -m)
 WORD_COUNT=$($TEXT | cut -f1 -d"References" | wc -w)
 NORSMOSTRANY=$(echo "print(\"{:.2f}\".format(float(${CHAR_COUNT})/1800))" | python3)
 echo "---------------------------------------------------------------"
