@@ -7,5 +7,6 @@ git rm --cached "${OUTPUT_FILE}.pdf"
 git commit -m "date"
 CHAR_COUNT=$(pdftotext -f $FIRST_PAGE_TO_COUNT "output/${OUTPUT_FILE}.pdf" - | wc -m)
 WORD_COUNT=$(pdftotext -f $FIRST_PAGE_TO_COUNT "output/${OUTPUT_FILE}.pdf" - | wc -w)
+echo "---------------------------------------------------------------"
 echo "WORD COUNT: $WORD_COUNT"
 echo "CHAR COUNT: $CHAR_COUNT"
