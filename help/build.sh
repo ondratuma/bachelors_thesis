@@ -1,10 +1,11 @@
 FIRST_PAGE_TO_COUNT=9
-
-cd build && pdfcsplain index && mv index.pdf ../output && cd ..
+ROOT_FILE=index
+OUTPUT_FILE=index
+cd build && pdfcsplain "$ROOT_FILE" && mv "${OUTPUT_FILE}.pdf" ../output && cd ..
 git add .
-git rm --cached index.pdf
+git rm --cached "${OUTPUT_FILE}.pdf"
 git commit -m "date"
-CHAR_COUNT=$(pdftotext -f $FIRST_PAGE_TO_COUNT output/index.pdf - | wc -m)
-WORD_COUNT=$(pdftotext -f $FIRST_PAGE_TO_COUNT output/index.pdf - | wc -w)
+CHAR_COUNT=$(pdftotext -f $FIRST_PAGE_TO_COUNT "output/${OUTPUT_FILE}.pdf" - | wc -m)
+WORD_COUNT=$(pdftotext -f $FIRST_PAGE_TO_COUNT "output/${OUTPUT_FILE}.pdf" - | wc -w)
 echo "WORD COUNT: $WORD_COUNT"
 echo "CHAR COUNT: $CHAR_COUNT"
