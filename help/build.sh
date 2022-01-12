@@ -13,4 +13,4 @@ echo "---------------------------------------------------------------"
 echo "WORD COUNT: $WORD_COUNT"
 echo "CHAR COUNT: $CHAR_COUNT"
 scale=2;
-echo "Normostrany: ($CHAR_COUNT / 1800)"
+echo "Normostrany: ${($CHAR_COUNT / 1800)}"
