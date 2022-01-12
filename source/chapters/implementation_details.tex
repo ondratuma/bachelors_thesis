@@ -3,8 +3,13 @@ In this chapter I will describe my implementation and the particular solutions u
 
 \sec Application architecture
 The application is split between server part and frontend part.
+Communicating through abstract interface built upon \nanomsg.
+
+Both parts of application have shared utils classes. The main classes used for communication are Messenger and Message, providing easy-to-use interface and abstracting the network layer away from the programmer.
+\communication_uml
 
 \sec GUI application
 The GUI is implemented using {\of}. 
 
-\communication_uml
+
+
