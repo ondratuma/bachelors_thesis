@@ -13,5 +13,4 @@ echo "CONVERTED"
 echo "---------------------------------------------------------------"
 echo "WORD COUNT: $WORD_COUNT"
 echo "CHAR COUNT: $CHAR_COUNT"
-scale=2;
 echo "Normostrany: $NORSMOSTRANY"
