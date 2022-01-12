@@ -6,9 +6,11 @@ The application is split between server part and frontend part.
 Communicating through abstract interface built upon \nanomsg.
 
 Both parts of application have shared utils classes. The main classes used for communication are Messenger and Message, providing easy-to-use interface and abstracting the network layer away from the programmer. The basic hierarchy of used communication classes is below.
-\communication_uml
+\communicationUml
 
 Server and Frontend each have its own instance of messenger associated with given message type, communicating through api defined by given messenger.
+
+\communicationSequence
 
 \sec GUI application
 The GUI is implemented using {\of}. 
