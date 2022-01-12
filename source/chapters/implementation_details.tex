@@ -8,7 +8,7 @@ Communicating through abstract interface built upon \nanomsg.
 Both parts of application have shared utils classes. The main classes used for communication are Messenger (asynchronous handler for inbound/outbound messages) and Message (serializable container), providing easy-to-use interface and abstracting the network layer away from the programmer. The basic hierarchy of used communication classes is below.
 \communicationUml
 
-Server and Frontend each have its own instance of Messenger associated with given Message type, communicating through api defined by given messenger. In the case of SychnronizedStateMessenger, the only the latest version of the synchronized state is publically available to the user.
+Server and Frontend each have its own instance of Messenger associated with given Message type, communicating through api defined by given messenger. In the case of SynchronizedStateMessenger, the only the latest version of the synchronized state is publicly available to the user.
 
 \communicationSequence
 
