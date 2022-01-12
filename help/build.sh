@@ -7,7 +7,7 @@ git rm --cached "${OUTPUT_FILE}.pdf"
 git commit -m "date"
 CHAR_COUNT=$(pdftotext -f $FIRST_PAGE_TO_COUNT "output/${OUTPUT_FILE}.pdf" - | wc -m)
 WORD_COUNT=$(pdftotext -f $FIRST_PAGE_TO_COUNT "output/${OUTPUT_FILE}.pdf" - | wc -w)
-NORSMOSTRANY=$(( $CHAR_COUNT * 100 / 1800))
+NORSMOSTRANY=$(( $CHAR_COUNT * 100 / 1800)) | sed -e 's/..$/.&/;t' -e 's/.$/.0&/'
 echo "---------------------------------------------------------------"
 echo "CONVERTED"
 echo "---------------------------------------------------------------"
