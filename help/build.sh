@@ -12,4 +12,5 @@ echo "CONVERTED"
 echo "---------------------------------------------------------------"
 echo "WORD COUNT: $WORD_COUNT"
 echo "CHAR COUNT: $CHAR_COUNT"
-echo "Normostrany: $scale=2; (($CHAR_COUNT / 1800))"
+scale=2;
+echo "Normostrany: $(($CHAR_COUNT / 1800))"
