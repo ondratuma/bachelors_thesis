@@ -7,7 +7,7 @@ git rm --cached "${OUTPUT_FILE}.pdf"
 git commit -m "date"
 TEXT=$(pdftotext "output/${OUTPUT_FILE}.pdf" -)
 CHAR_COUNT=$(echo $TEXT | wc -m)
-WORD_COUNT=$($TEXT | cut -f1 -d"References" | wc -w)
+WORD_COUNT=$(echo $TEXT | cut -f1 -d"References" | wc -w)
 NORSMOSTRANY=$(echo "print(\"{:.2f}\".format(float(${CHAR_COUNT})/1800))" | python3)
 echo "---------------------------------------------------------------"
 echo "CONVERTED"
