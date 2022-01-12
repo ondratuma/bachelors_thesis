@@ -10,6 +10,8 @@ Both parts of application have shared utils classes. The main classes used for c
 
 Server and Frontend each have its own instance of Messenger associated with given Message type, communicating through api defined by given messenger. In the case of SynchronizedStateMessenger, the only the latest version of the synchronized state is publicly available to the user.
 
+The asynchronous nature of the communication can be seen on the sequence diagram below.
+
 \communicationSequence
 
 \sec GUI application
