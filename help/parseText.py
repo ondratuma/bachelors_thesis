@@ -5,4 +5,4 @@ text = []
 for line in sys.stdin:
     text.append(line)
  
-print(len(text))
+print(text)
