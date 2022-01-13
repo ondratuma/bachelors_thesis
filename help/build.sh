@@ -1,7 +1,7 @@
 ROOT_FILE=index
 OUTPUT_FILE=semestralni_prace
 PAGE_TEXT=""
-x=1
+x=0
 cd build && pdfcsplain -halt-on-error "$ROOT_FILE" && mv "${ROOT_FILE}.pdf" ../output/"${OUTPUT_FILE}.pdf" && cd ..
 
 git add .
