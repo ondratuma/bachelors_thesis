@@ -32,6 +32,9 @@ NUMBER_OF_CHARS=$(echo "$PAGE_TEXT" | sed 's/ //g' | sed 's/\n//g' | wc -c)
 NORMOSTRAN=$(echo "print(\"{:.2f}\".format($NUMBER_OF_CHARS/1800))" | python)
 TEXT_PAGES=$(( $PAGE_WITH_REFERENCES - $NUMBER_OF_PRE_WORK_SIDES ))
 NUMBER_OF_CHARS_TOTAL=$(pdftotext "output/${OUTPUT_FILE}.pdf" - | wc -c)
+
+
+
 echo "------------------------------------"
 echo "Celkem stran             : $PAGE_COUNT_TOTAL"
 echo "Celkem znaků             : $NUMBER_OF_CHARS_TOTAL"
