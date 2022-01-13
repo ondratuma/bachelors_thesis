@@ -4,6 +4,6 @@ cd build && pdfcsplain "$ROOT_FILE" && mv "${ROOT_FILE}.pdf" ../output/"${OUTPUT
 git add .
 git rm --cached "${OUTPUT_FILE}.pdf"
 git commit -m "date"
-TEXT=$(pdftotext "output/${OUTPUT_FILE}.pdf" - > output/text.txt)
+TEXT=$(pdftotext "output/${OUTPUT_FILE}.pdf" -)
 NORSMOSTRANY=$(echo "$TEXT" | python help/parseText.py)
 echo $NORSMOSTRANY
