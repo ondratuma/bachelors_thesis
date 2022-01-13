@@ -34,7 +34,7 @@ TEXT_PAGES=$(( $PAGE_WITH_REFERENCES - $NUMBER_OF_PRE_WORK_SIDES ))
 
 echo "------------------------------------"
 echo "Celkem stran      : $PAGE_COUNT_TOTAL"
-echo "Strany generované      : $(($PAGE_COUNT_TOTAL - $TEXT_PAGES))"
+echo "Strany generované : $(($PAGE_COUNT_TOTAL - $TEXT_PAGES))"
 echo "Celkem stran textu: $TEXT_PAGES"
 echo "Celkem slov       : $NUMBER_OF_WORDS"
 echo "------------------------------------"
