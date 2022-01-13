@@ -6,4 +6,4 @@ git add .
 git rm --cached "${OUTPUT_FILE}.pdf"
 git commit -m "date"
 TEXT=$(pdftotext "output/${OUTPUT_FILE}.pdf" - | grep -o 'Chapter 1.*' )
-NORSMOSTRANY=$(echo "$TEXT" | python3 parseText.py)
+NORSMOSTRANY=$(echo "$TEXT" | python3 help/parseText.py)
