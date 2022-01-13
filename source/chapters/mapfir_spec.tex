@@ -14,7 +14,8 @@ The solver is standalone \cmake application and the visualizer is using openFram
 \secc{input format}
 \mapfirInputFormat 
 
-The input format is as illustrated on ~\ref[mapfir_input_format]
+The input format is as illustrated on ~\ref[mapfir_input_format] starting by name of map file on the first line, followed by number of agents on the second, followed by the seed of the problem, followed by two time configuration options.
+The next {number of agents} lines are in the format [x coordinate of start] [y coordinate of start] [x coordinate of end] [y coordinate of end]
 
 \sec The visualizer
 The visualizer uses output of {~\ref[mapfir_solver]} to visualize the run of generated simulation. It lets the user change the simulations speed and move through discrete time steps. Other features include selecting only single agent to display, stopping agent during simulation and visual features such as hiding/showing of lines to goals.
