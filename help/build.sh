@@ -5,4 +5,4 @@ git add .
 git rm --cached "${OUTPUT_FILE}.pdf"
 git commit -m "date"
 TEXT=$(pdftotext "output/${OUTPUT_FILE}.pdf" - > output/text.txt)
-NORSMOSTRANY=$(python help/parseText.py)
+NORSMOSTRANY=$(echo "$TEXT" | python help/parseText.py)
