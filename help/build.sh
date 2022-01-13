@@ -29,8 +29,9 @@ PAGE_WITH_REFERENCES=$x
 
 PAGE_TEXT=$(pdftotext -f $((NUMBER_OF_PRE_WORK_SIDES + 1)) -l $(($PAGE_WITH_REFERENCES - 1)) "output/${OUTPUT_FILE}.pdf" - | sed -E "s/^https:.*$//")
 
-NUMBER_OF_WORDS=$(echo "$PAGE_TEXT" | sed 's/ //g' | sed 's/\n//g' | wc -c)
-NUMBER_OF_CHARS=$(echo "$PAGE_TEXT" | wc -c)
+NUMBER_OF_WORDS=$(echo "$PAGE_TEXT" | wc -w)
+NUMBER_OF_CHARS=$(echo "$PAGE_TEXT" | sed 's/ //g' | sed 's/\n//g' | wc -c)
+echo "Celkem slov: $NUMBER_OF_WORDS"
 echo "Celkem znaků: $NUMBER_OF_CHARS"
 echo "Celkem stran: $PAGE_COUNT_TOTAL"
 echo "Strany úvodu: $NUMBER_OF_PRE_WORK_SIDES"
