@@ -31,10 +31,10 @@ NUMBER_OF_WORDS=$(echo "$PAGE_TEXT" | wc -w)
 NUMBER_OF_CHARS=$(echo "$PAGE_TEXT" | sed 's/ //g' | sed 's/\n//g' | wc -c)
 
 echo "------------------------------------"
-echo "Celkem slov : $NUMBER_OF_WORDS"
-echo "Celkem znaků: $NUMBER_OF_CHARS"
-echo "Celkem stran: $PAGE_COUNT_TOTAL"
-echo "Strany úvodu: $NUMBER_OF_PRE_WORK_SIDES"
+echo "Celkem slov       : $NUMBER_OF_WORDS"
+echo "Celkem znaků      : $NUMBER_OF_CHARS"
+echo "Celkem stran      : $PAGE_COUNT_TOTAL"
+echo "Strany úvodu      : $NUMBER_OF_PRE_WORK_SIDES"
 echo "Celkem stran textu: $(( $PAGE_WITH_REFERENCES - $NUMBER_OF_PRE_WORK_SIDES ))"
 
 
