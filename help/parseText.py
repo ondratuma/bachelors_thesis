@@ -1,4 +1,4 @@
-text = input()
+import fileinput
 
-print("TEXT: --------------------")
-print(text)
+for line in fileinput.input():
+    print(line)
