@@ -8,7 +8,6 @@ for line in sys.stdin:
     if not re.search("^https://.*$", line):
         text += line
         i+=1
-print(i)
 text = ''.join([i for i in text if i.isalpha()])
 text = ''.join(re.split("References", text)[:-1])
 text = ''.join(re.split("ChapterIntroduction", text)[1:])
