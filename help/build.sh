@@ -35,7 +35,7 @@ NUMBER_OF_CHARS_TOTAL=$(pdftotext "output/${OUTPUT_FILE}.pdf" - | wc -c)
 echo "------------------------------------"
 echo "Celkem stran      : $PAGE_COUNT_TOTAL"
 echo "Celkem znaků      : $NUMBER_OF_CHARS_TOTAL"
-echo "Strany generované : $(($PAGE_COUNT_TOTAL - $TEXT_PAGES))"
+echo "Z toho generované : $(($PAGE_COUNT_TOTAL - $TEXT_PAGES))"
 echo "------------------------------------"
 echo "Celkem slov textu : $NUMBER_OF_WORDS"
 echo "Celkem stran textu: $TEXT_PAGES"
