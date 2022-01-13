@@ -25,6 +25,7 @@ do
   PAGE_TEXT=$(pdftotext -f $x -l $x "output/${OUTPUT_FILE}.pdf" -)
   x=$(( $x - 1 ))
 done
+PAGE_WITH_REFERENCES=$x
 
 echo "Celkem stran: $PAGE_COUNT_TOTAL"
 echo "Strany úvodu: $NUMBER_OF_PRE_WORK_SIDES"
