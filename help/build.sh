@@ -38,7 +38,7 @@ echo "Celkem znaků      : $NUMBER_OF_CHARS"
 echo "Celkem stran      : $PAGE_COUNT_TOTAL"
 echo "Strany úvodu      : $NUMBER_OF_PRE_WORK_SIDES"
 echo "Celkem stran textu: $(( $PAGE_WITH_REFERENCES - $NUMBER_OF_PRE_WORK_SIDES ))"
-echo "Celkem normostran : "
+echo "Celkem normostran : $NORMOSTRAN"
 
 
 
