@@ -7,4 +7,4 @@ git commit -m "date"
 TEXT=$(pdftotext "output/${OUTPUT_FILE}.pdf" -)
 NORSMOSTRANY=$(echo "$TEXT" | python help/parseText.py)
 echo "$NORSMOSTRANY"
-xiftool output/"${OUTPUT_FILE}.pdf" | awk -F": " '/Page Count/{print $2}'
+exiftool output/"${OUTPUT_FILE}.pdf" | awk -F": " '/Page Count/{print $2}'
