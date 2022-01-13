@@ -18,8 +18,8 @@ do
   x=$(( $x + 1 ))
 done
 x=$(( $x - 2 ))
-echo "Strany úvodu: $x"
 echo "Celkem stran: $PAGE_COUNT_TOTAL"
+echo "Strany úvodu: $x"
 echo "Celkem stran textu: $(( $PAGE_COUNT_TOTAL - $x ))"
 
 
