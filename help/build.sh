@@ -2,7 +2,7 @@ ROOT_FILE=index
 OUTPUT_FILE=semestralni_prace
 
 x=1
-while [ $x -le 15 ]
+while [[ $x -le 15 ]]
 do
   PAGE_TEXT=$(pdftotext -f $x -l $x "output/${OUTPUT_FILE}.pdf" -)
   x=$(( $x + 1 ))
