@@ -30,7 +30,7 @@ PAGE_TEXT=$(pdftotext -f $((NUMBER_OF_PRE_WORK_SIDES + 1)) -l $(($PAGE_WITH_REFE
 NUMBER_OF_WORDS=$(echo "$PAGE_TEXT" | wc -w)
 NUMBER_OF_CHARS=$(echo "$PAGE_TEXT" | sed 's/ //g' | sed 's/\n//g' | wc -c)
 
-NORMOSTRAN=$("python print($NUMBER_OF_CHARS/1800)")
+NORMOSTRAN=$(python print($NUMBER_OF_CHARS/1800))
 
 echo "------------------------------------"
 echo "Celkem slov       : $NUMBER_OF_WORDS"
