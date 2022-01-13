@@ -7,4 +7,5 @@ git commit -m "date"
 TEXT=$(pdftotext "output/${OUTPUT_FILE}.pdf" -)
 NORSMOSTRANY=$(echo "$TEXT" | python help/parseText.py)
 echo "$NORSMOSTRANY"
-pdftk output/"${OUTPUT_FILE}.pdf" dump_data | grep NumberOfPages | awk -F ' ' '{print $2}'
+PAGE_COUNT_TOTAL=$(pdftk output/"${OUTPUT_FILE}.pdf" dump_data | grep NumberOfPages | awk -F ' ' '{print $2}')
+echo "Celkem stran: $PAGE_COUNT_TOTAL"
