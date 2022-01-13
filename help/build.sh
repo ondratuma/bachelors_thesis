@@ -41,7 +41,7 @@ echo "Celkem slov textu        : $NUMBER_OF_WORDS"
 echo "Celkem stran textu       : $TEXT_PAGES"
 echo "------------------------------------"
 echo "Znaků textu              : $NUMBER_OF_CHARS"
-echo "Normostrany       : $NORMOSTRAN"
+echo "Normostrany              : $NORMOSTRAN"
 
 
 
