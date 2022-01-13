@@ -13,7 +13,7 @@ echo "$NORSMOSTRANY"
 PAGE_COUNT_TOTAL=$(pdftk output/"${OUTPUT_FILE}.pdf" dump_data | grep NumberOfPages | awk -F ' ' '{print $2}')
 echo "Celkem stran: $PAGE_COUNT_TOTAL"
 
-while ! [[ $PAGE_TEXT != \.*Chapter.*\ ]]
+while ! [[ $PAGE_TEXT == \.*Chapter.*\ ]]
 do
   PAGE_TEXT=$(pdftotext -f $x -l $x "output/${OUTPUT_FILE}.pdf" -)
   x=$(( $x + 1 ))
