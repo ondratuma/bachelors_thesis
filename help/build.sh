@@ -14,6 +14,7 @@ PAGE_COUNT_TOTAL=$(pdftk output/"${OUTPUT_FILE}.pdf" dump_data | grep NumberOfPa
 
 echo "První strana práce: $x"
 echo "Celkem stran: $PAGE_COUNT_TOTAL"
+echo "Celkem stran textu: $(( $PAGE_COUNT_TOTAL = + ))"
 
 while  [[ ! $PAGE_TEXT =~ .*Chapter.* ]]
 do
