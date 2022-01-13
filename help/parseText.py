@@ -5,9 +5,10 @@ import re
 text = ""
 i = 0;
 for line in sys.stdin:
+    print(line)
     # if not re.search("^https://.*$", text):
     text += line
-    i+=1
+    # i+=1
 print(i)
 text = ''.join([i for i in text if i.isalpha()])
 text = ''.join(re.split("References", text)[:-1])
