@@ -8,13 +8,15 @@ In this chapter I will take a detailed look at the inner workings of \mapfIR pro
 \sec Introduction
 {\mapfIR} consists of 2 parts. A solver and a visualizer. 
 The solver is standalone \cmake application and the visualizer is using openFrameworks as in our case. This split is necessary as described in {~\ref[choosing_gui]}.
+\br
+All positional data is assuming grid representation of the simulated map. The representation of the data expects the coordinate (0, 0) to be the top-left corner of the simulation grid, while (xm - 1, ym - 1) is expected to be the bottom-right corner od the grid, where xm, ym is the number of columns and rows in the simulation grid, respectively.
 
 \label[mapfir_solver]
 \sec The solver
 \secc{Input format}
 \mapfirInputFormat 
 The input format is as illustrated on ~\ref[mapfir_input_format] starting by name of map file on the first line, followed by number of agents on the second, followed by the seed of the problem, followed by two time configuration options.
-The next \uv{number of agents} lines are in the format sX sY gX gY where sX and sY are the x and y coordinates of the starting point, respectively, and gX, gY are the x and y coordinates of the goal, respectively.
+The next \uv{number of agents} lines are in the format sX sY gX gY where sX and sY are the x and y coordinates of the starting point, respectively, and gX, gY are the x and y coordinates of the goal, respectively. 
 
 \label[mapfir_solver_output_format]
 \secc{Output format}
