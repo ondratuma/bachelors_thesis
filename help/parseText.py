@@ -8,4 +8,5 @@ for line in sys.stdin:
 
 text = ''.join([i for i in text if i.isalpha()])
 text = re.split("Reference", text)[:-1]
+print(text)
 print("Počet slov:",len(text))
