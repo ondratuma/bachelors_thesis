@@ -5,7 +5,7 @@ import re
 text = ""
 i = 0;
 for line in sys.stdin:
-    if not re.search("https://.*", text):
+    if not re.search("https://.*$", text):
         text += line
         i+=1
 print(i)
