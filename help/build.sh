@@ -30,13 +30,15 @@ PAGE_TEXT=$(pdftotext -f $((NUMBER_OF_PRE_WORK_SIDES + 1)) -l $(($PAGE_WITH_REFE
 NUMBER_OF_WORDS=$(echo "$PAGE_TEXT" | wc -w)
 NUMBER_OF_CHARS=$(echo "$PAGE_TEXT" | sed 's/ //g' | sed 's/\n//g' | wc -c)
 
+NORMOSTRAN=$(echo "print("\{:.2f}\".format(${NUMBER_OF_CHARS} / 1800))" | python)
+
 echo "------------------------------------"
 echo "Celkem slov       : $NUMBER_OF_WORDS"
 echo "Celkem znaků      : $NUMBER_OF_CHARS"
 echo "Celkem stran      : $PAGE_COUNT_TOTAL"
 echo "Strany úvodu      : $NUMBER_OF_PRE_WORK_SIDES"
 echo "Celkem stran textu: $(( $PAGE_WITH_REFERENCES - $NUMBER_OF_PRE_WORK_SIDES ))"
-echo "Celkem normostran : $(echo "print("\{:.2f}\".format(${NUMBER_OF_CHARS} / 1800))" | python)"
+echo "Celkem normostran : "
 
 
 
