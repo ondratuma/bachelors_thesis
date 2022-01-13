@@ -4,7 +4,8 @@ import re
 
 text = ""
 for line in sys.stdin:
-    text += line
+    if not re.search("https://.*", text):
+        text += line
 
 text = ''.join([i for i in text if i.isalpha()])
 text = ''.join(re.split("References", text)[:-1])
