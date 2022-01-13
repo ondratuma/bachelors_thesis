@@ -20,7 +20,7 @@ done
 x=$(( $x - 1 ))
 echo "První strana práce: $x"
 echo "Celkem stran: $PAGE_COUNT_TOTAL"
-echo "Celkem stran textu: $(( $PAGE_COUNT_TOTAL - $x + 1 ))"
+echo "Celkem stran textu: $(( $PAGE_COUNT_TOTAL - $x ))"
 
 
 
