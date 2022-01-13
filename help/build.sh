@@ -20,4 +20,4 @@ do
 done
 
 
-echo "PAGE NUMBER: $x"
+echo "První strana práce: $x"
