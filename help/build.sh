@@ -11,6 +11,8 @@ TEXT=$(pdftotext "output/${OUTPUT_FILE}.pdf" -)
 NORSMOSTRANY=$(echo "$TEXT" | python help/parseText.py)
 echo "$NORSMOSTRANY"
 PAGE_COUNT_TOTAL=$(pdftk output/"${OUTPUT_FILE}.pdf" dump_data | grep NumberOfPages | awk -F ' ' '{print $2}')
+
+echo "První strana práce: $x"
 echo "Celkem stran: $PAGE_COUNT_TOTAL"
 
 while  [[ ! $PAGE_TEXT =~ .*Chapter.* ]]
@@ -20,4 +22,3 @@ do
 done
 
 
-echo "První strana práce: $x"
