@@ -17,10 +17,10 @@ do
   PAGE_TEXT=$(pdftotext -f $x -l $x "output/${OUTPUT_FILE}.pdf" -)
   x=$(( $x + 1 ))
 done
-x=$(( $x - 1 ))
-echo "První strana práce: $x"
+x=$(( $x - 2 ))
+echo "Strany úvodu: $x"
 echo "Celkem stran: $PAGE_COUNT_TOTAL"
-echo "Celkem stran textu: $(( $PAGE_COUNT_TOTAL - $x + 1 ))"
+echo "Celkem stran textu: $(( $PAGE_COUNT_TOTAL - $x ))"
 
 
 
