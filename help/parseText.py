@@ -1,3 +1,4 @@
-file = open('output/text.txt',mode='r')
-text = file.read()
-print(text)
+import fileinput
+
+for line in fileinput.input():
+    print(line)
