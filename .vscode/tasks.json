@@ -10,7 +10,8 @@
             "panel": "shared"
           },
           "options": {
-            "cwd": "${workspaceFolder}"
+            "cwd": "${workspaceFolder}",
+            "ContinueOnError": true
           }
         }
       ]

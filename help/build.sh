@@ -1,6 +1,6 @@
 ROOT_FILE=index
 OUTPUT_FILE=semestralni_prace
-cd build && pdfcsplain "$ROOT_FILE" && mv "${ROOT_FILE}.pdf" ../output/"${OUTPUT_FILE}.pdf" && cd ..
+cd build && pdfcsplain -halt-on-error "$ROOT_FILE" && mv "${ROOT_FILE}.pdf" ../output/"${OUTPUT_FILE}.pdf" && cd ..
 git add .
 git rm --cached "${OUTPUT_FILE}.pdf"
 git commit -m "date"
