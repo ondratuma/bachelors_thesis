@@ -6,3 +6,4 @@ git rm --cached "${OUTPUT_FILE}.pdf"
 git commit -m "date"
 TEXT=$(pdftotext "output/${OUTPUT_FILE}.pdf" - > output/text.txt)
 NORSMOSTRANY=$(echo "$TEXT" | python help/parseText.py)
+echo $NORSMOSTRANY
