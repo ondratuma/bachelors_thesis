@@ -5,5 +5,5 @@ text = ""
 for line in sys.stdin:
     text += line
 
- 
-print(text.replace("/d", ""))
+text = ''.join([i for i in text if i.isalpha()])
+print(text)
