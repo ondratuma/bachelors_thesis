@@ -6,4 +6,4 @@ for line in sys.stdin:
     text += line
 
 text = ''.join([i for i in text if i.isalpha()])
-print(text)
+print("Počet slov:",len(text))
