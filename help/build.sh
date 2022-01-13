@@ -1,5 +1,13 @@
 ROOT_FILE=index
 OUTPUT_FILE=semestralni_prace
+
+x=1
+while [ $x -le 15 ]
+do
+  PAGE_TEXT=$(pdftotext -f $x -l $x "output/${OUTPUT_FILE}.pdf" -)
+  x=$(( $x + 1 ))
+done
+
 cd build && pdfcsplain -halt-on-error "$ROOT_FILE" && mv "${ROOT_FILE}.pdf" ../output/"${OUTPUT_FILE}.pdf" && cd ..
 git add .
 git rm --cached "${OUTPUT_FILE}.pdf"
