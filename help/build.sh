@@ -29,7 +29,7 @@ PAGE_WITH_REFERENCES=$x
 
 echo "Celkem stran: $PAGE_COUNT_TOTAL"
 echo "Strany úvodu: $NUMBER_OF_PRE_WORK_SIDES"
-echo "Celkem stran textu: $(( $PAGE_COUNT_TOTAL - $NUMBER_OF_PRE_WORK_SIDES ))"
+echo "Celkem stran textu: $(( $PAGE_WITH_REFERENCES - $NUMBER_OF_PRE_WORK_SIDES ))"
 
 
 
