@@ -8,8 +8,6 @@ git add .
 git rm --cached "${OUTPUT_FILE}.pdf"
 git commit -m "date"
 TEXT=$(pdftotext "output/${OUTPUT_FILE}.pdf" -)
-NORSMOSTRANY=$(echo "$TEXT" | python help/parseText.py)
-echo "$NORSMOSTRANY"
 PAGE_COUNT_TOTAL=$(pdftk output/"${OUTPUT_FILE}.pdf" dump_data | grep NumberOfPages | awk -F ' ' '{print $2}')
 
 while  [[ ! $PAGE_TEXT =~ .*Chapter.* ]]
