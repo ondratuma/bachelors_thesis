@@ -29,6 +29,8 @@ PAGE_WITH_REFERENCES=$x
 
 PAGE_TEXT=$(pdftotext -f $((NUMBER_OF_PRE_WORK_SIDES + 1)) -l $(($PAGE_WITH_REFERENCES - 1)) "output/${OUTPUT_FILE}.pdf" -)
 
+NUMBER_OF_WORDS=(echo $PAGE_TEXT | wc -c)
+
 echo "Celkem stran: $PAGE_COUNT_TOTAL"
 echo "Strany úvodu: $NUMBER_OF_PRE_WORK_SIDES"
 echo "Celkem stran textu: $(( $PAGE_WITH_REFERENCES - $NUMBER_OF_PRE_WORK_SIDES ))"
