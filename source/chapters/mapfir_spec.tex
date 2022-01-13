@@ -11,12 +11,12 @@ The solver is standalone \cmake application and the visualizer is using openFram
 
 \label[mapfir_solver]
 \sec The solver
-\secc{input format}
+\secc{Input format}
 \mapfirInputFormat 
 The input format is as illustrated on ~\ref[mapfir_input_format] starting by name of map file on the first line, followed by number of agents on the second, followed by the seed of the problem, followed by two time configuration options.
 The next \uv{number of agents} lines are in the format sX sY gX gY where sX and sY are the x and y coordinates of the starting point, respectively, and gX, gY are the x and y coordinates of the goal, respectively.
 
-\secc{output format}
+\secc{Output format}
 \mapfirOutputFormat 
 The output format is as illustrated on ~\ref[mapfir_output_format] with the important information being number of agents on row 2, followed by starts coordinates on row 13 in format (x1, y1), (x2, y2)... (x[number of agents], y300[number of agents]),  where x and y are the respective coordinates for each agent identified by the index of its coordinates on the row. Followed by goals in the same format. Following are [makespan] lines each representing single discrete timestep in the simulation, where each line has the coordinates of each agent in the above mentioned format.
 
