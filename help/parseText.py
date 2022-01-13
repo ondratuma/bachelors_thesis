@@ -1,8 +1,9 @@
 
 import sys
  
-text = []
+text = ""
 for line in sys.stdin:
-    text.append(line)
+    text += line
+
  
-print(text[0].replace(" ", ""))
+print(text.replace(" ", ""))
