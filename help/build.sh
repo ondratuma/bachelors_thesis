@@ -12,7 +12,6 @@ do
    fi
 done
 
-args+=( '--presentation' ${presentation})
 echo '--presentation' ${presentation}
 
 ROOT_FILE=index
