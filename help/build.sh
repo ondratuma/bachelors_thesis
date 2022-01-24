@@ -13,7 +13,7 @@ do
 done
 
 args+=( '--presentation' ${presentation})
-echo ${presentation}
+echo '--presentation' ${presentation}
 
 ROOT_FILE=index
 OUTPUT_FILE=semestralni_prace
