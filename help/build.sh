@@ -12,16 +12,28 @@ do
    fi
 done
 
-echo '--presentation' ${presentation}
+if [ ${presentation}="1" ]; then
+   echo "Generating presentation"
+   ROOT_FILE=prezentace_semestralni_projekt
+   OUTPUT_FILE=prezentace_semestralni_projekt
+else
+   echo "Generating PDF work"
+   ROOT_FILE=index
+   OUTPUT_FILE=semestralni_prace
+fi
 
-ROOT_FILE=index
-OUTPUT_FILE=semestralni_prace
-PAGE_TEXT=""
-x=1
 cd build && pdfcsplain -halt-on-error "$ROOT_FILE" && mv "${ROOT_FILE}.pdf" ../output/"${OUTPUT_FILE}.pdf" && cd ..
 
 git add .
 git commit -m "date"
+
+if [ ${presentation}="1" ]; then
+   echo "Done"
+   exit
+fi
+
+PAGE_TEXT=""
+x=1
 TEXT=$(pdftotext "output/${OUTPUT_FILE}.pdf" -)
 PAGE_COUNT_TOTAL=$(pdftk output/"${OUTPUT_FILE}.pdf" dump_data | grep NumberOfPages | awk -F ' ' '{print $2}')
 
