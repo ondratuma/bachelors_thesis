@@ -1,3 +1,5 @@
+./build/buildPresentation
+
 ROOT_FILE=index
 OUTPUT_FILE=semestralni_prace
 PAGE_TEXT=""
