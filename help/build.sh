@@ -1,4 +1,4 @@
-ROOT_FILE=index
+ROOT_FILE=${1:-index}
 OUTPUT_FILE=semestralni_prace
 PAGE_TEXT=""
 x=1
