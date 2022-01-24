@@ -1,4 +1,19 @@
-source ./build/buildPresentation
+args=()
+
+for argument in "$@"
+do
+
+    key=$(echo $argument | cut -f1 -d=)
+    value=$(echo $argument | cut -f2 -d=)   
+
+    if [[ $key == *"--"* ]]; then
+        v="${key/--/}"
+        declare $v="${value}" 
+   fi
+done
+
+args+=( '--presentation' ${presentation})
+echo ${presentation}
 
 ROOT_FILE=index
 OUTPUT_FILE=semestralni_prace
