@@ -4,7 +4,7 @@
         {
           "label": "save",
           "type": "shell",
-          "command": "./help/build.sh",
+          "command": "./help/build.sh --presentation",
           "presentation": {
             "reveal": "always",
             "panel": "shared"
