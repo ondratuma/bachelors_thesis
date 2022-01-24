@@ -8,7 +8,7 @@ do
 
     if [[ $key == *"--"* ]]; then
         v="${key/--/}"
-        declare $v="${value}" 
+        declare $v=1 
    fi
 done
 
