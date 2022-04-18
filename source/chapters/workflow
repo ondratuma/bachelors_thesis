@@ -1,0 +1,9 @@
+\chap Workflows
+
+This chapter will describe current and new workflow with working with robots.
+
+\sec Original workflow
+As part of the original workflow, the server part was run on a single pc with static IP address in lab. When user updates the repository, he needs to manually connect to the server, pull the git repository, rebuild the server. This has to happen also for each of the robots. The current workflow is inefficient and makes it really hard to test small, incremental changes.
+
+\sec New workflow
+In the new workflow, I eliminated the part where user has to manually connect to each device and update & build it. Bash script is provided supporting all update/run related workflows. 
