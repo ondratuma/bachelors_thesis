@@ -22,6 +22,10 @@ else
    OUTPUT_FILE=semestralni_prace
 fi
 
+echo "Generating PDF work"
+ROOT_FILE=index
+OUTPUT_FILE=semestralni_prace
+
 cd build && pdfcsplain -halt-on-error "$ROOT_FILE" && mv "${ROOT_FILE}.pdf" ../output/"${OUTPUT_FILE}.pdf" && cd ..
 
 git add .
