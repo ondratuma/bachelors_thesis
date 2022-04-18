@@ -1,5 +1,19 @@
 args=()
 
+presentation=0
+
+for argument in "$@"
+do
+
+    key=$(echo $argument | cut -f1 -d=)
+    value=$(echo $argument | cut -f2 -d=)   
+
+    if [[ $key == *"--"* ]]; then
+        v="${key/--/}"
+        declare $v=1 
+   fi
+done
+
 if [ ${presentation}=="1" ]; then
    echo "Generating presentation"
    ROOT_FILE=prezentace_semestralni_projekt
