@@ -1,5 +1,7 @@
 args=()
 
+presentation=0
+
 for argument in "$@"
 do
 
