@@ -1,8 +1,5 @@
 args=()
 
-presentation=0
-
-
 if [ ${presentation}=="1" ]; then
    echo "Generating presentation"
    ROOT_FILE=prezentace_semestralni_projekt
