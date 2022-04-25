@@ -2,7 +2,7 @@ args=()
 
 presentation="0"
 
-if [ ${presentation}=="1" ]; then
+if [ $presentation == "1" ]; then
    echo "Generating presentation"
    ROOT_FILE=prezentace_semestralni_projekt
    OUTPUT_FILE=prezentace_semestralni_projekt
