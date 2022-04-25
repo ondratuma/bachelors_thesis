@@ -1,6 +1,6 @@
 args=()
 
-presentation=0
+presentation="0"
 
 for argument in "$@"
 do
