@@ -17,7 +17,7 @@ cd build && pdfcsplain -halt-on-error "$ROOT_FILE" && mv "${ROOT_FILE}.pdf" ../o
 git add .
 git commit -m "date"
 
-if [ ${presentation}=="1" ]; then
+if [ $presentation == "1" ]; then
    echo "Done"
    exit
 fi
