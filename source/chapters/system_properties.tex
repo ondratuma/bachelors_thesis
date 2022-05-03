@@ -1,32 +1,5 @@
 \chap Implemented system properties
 The main goal of this chapter is to describe and evaluate the properties of the implemented system.
 
-\sec Application architecture
-The application is split between server part and frontend part.
-Communicating through an abstract interface built upon \nanomsg.
-
-Both parts of the application have shared utils classes. The main classes used for communication are Messenger (asynchronous handler for inbound/outbound messages) and Message (serializable container), providing an easy-to-use interface and abstracting the network layer away from the programmer. The basic hierarchy of used communication classes is illustrated below.
-\communicationUml
-\break
-Server and Frontend each have its own instance of Messenger associated with given Message type, communicating through api defined by given messenger. In the case of SynchronizedStateMessenger, only the latest version of the synchronized state is publicly available to the user.
-
-The asynchronous nature of the communication can be seen in the sequence diagram below.
-
-\communicationSequence
-
-The asynchronous handlers allow both applications to run in the main thread performing latency-sensitive tasks.
-
-\sec Shared resources
-\sec Communication schema
-\sec TurtleBot build
-\sec TurtleBot runtime
-\sec Server build
-\sec Server runtime
-\sec Client build
-\sec Client runtime
-The GUI is implemented using {\of}. The GUI runs a single thread for main logic and event handling, one for the GUI application, and one per each messenger, allowing uninterrupted handling of all events that might arise and providing smooth rendering for the application. 
-\fleetControlGui
-\break
-The GUI, as visualized on ~\ref[fleet_control_user_interface], displays robot positions at provided discrete time steps, allowing the user to browse all time steps and show available information about them. It also provides the user with the ability to disable individual agents for a given simulation run and to completely start and stop the simulation run.
-\sec Environment setup
-\sec Environment behavior
+\sec User experience
+\sec Demonstration setup
