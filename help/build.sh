@@ -1,11 +1,16 @@
 args=()
 
 presentation="0"
+bp="1"
 
 if [ $presentation == "1" ]; then
    echo "Generating presentation"
    ROOT_FILE=prezentace_semestralni_projekt
    OUTPUT_FILE=prezentace_semestralni_projekt
+elif [ $bp == "1" ]; then
+   echo "Generating BP"
+   ROOT_FILE=prezentace_semestralni_projekt
+   OUTPUT_FILE=bakalarska_prace
 else
    echo "Generating PDF work"
    ROOT_FILE=index
@@ -64,7 +69,3 @@ echo "Celkem stran textu       : $TEXT_PAGES"
 echo "------------------------------------"
 echo "Znaků textu              : $NUMBER_OF_CHARS"
 echo "Normostrany              : $NORMOSTRAN"
-
-
-
-
