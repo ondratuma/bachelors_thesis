@@ -5,7 +5,7 @@ presentation="0"
 if [ $presentation == "1" ]; then
    echo "Generating presentation"
    ROOT_FILE=prezentace_semestralni_projekt
-   OUTPUT_FILE=prezentace_semestralni_projekt
+   OUTPUT_FILE=bakalarska_prace
 else
    echo "Generating PDF work"
    ROOT_FILE=index
