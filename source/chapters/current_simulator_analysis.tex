@@ -1,0 +1,29 @@
+\chap Analysis of the SIPPDemonstrator project
+In this chapter I will take a detailed look at the inner workings of \mapfIR project. The purpose of this chapter is also to point out differences in formats and inner workings that we need to migrate in order to achieve full copmatibility.
+
+{\mapfIR} is {\uv{A simulator and visualizer of Multi-Agent Path Finding (MAPF), used in a paper "Iterative Refinement for Real-Time Multi-Robot Path Planning" (to appear at IROS-21). It is written in C++(17) with CMake (≥v3.16) build. The repository uses Google Test and the original library for 2D pathfinding as git submodules. The visualizer uses openFrameworks and works only on macOS.
+    }\cite[MAPFIR:REPO_DESCRIPTION]
+}
+
+\sec Introduction
+{\mapfIR} consists of 2 parts. A solver and a visualizer. 
+The solver is a standalone \cmake application and the visualizer is using openFrameworks as in our case. This split is necessary as described in {~\ref[choosing_gui]}.
+
+\label[mapfir_solver]
+\sec The solver
+\secc{Input format}
+\mapfirInputFormat 
+The input format is as illustrated on ~\ref[mapfir_input_format] starting by the name of a map file on the first line, followed by the number of agents on the second, followed by the seed of the problem, followed by two time configuration options.
+The next \uv{number of agents} lines are in the format sX sY gX gY where sX and sY are the x and y coordinates of the starting point, respectively, and gX, gY are the x and y coordinates of the goal, respectively. 
+
+\label[mapfir_solver_output_format]
+\secc{Output format}
+\mapfirOutputFormat 
+The output format is as illustrated on ~\ref[mapfir_output_format] with the important information being the number of agents on row 2, followed by starts coordinates on row 13 in format (x1, y1), (x2, y2)... (x[number of agents], y300[number of agents]),  where x and y are the respective coordinates for each agent identified by the index of its coordinates on the row. Followed by goals in the same format. Following are [makespan] lines each representing a single discrete timestep in the simulation, where each line has the coordinates of each agent in the above-mentioned format.
+
+\secc{General format expectations}
+All positional data is assuming a grid representation of the simulated map. The representation of the data expects the coordinate (0, 0) to be the top-left corner of the simulation grid, while (xm - 1, ym - 1) is expected to be the bottom-right corner of the grid, where xm, ym is the number of columns and rows in the simulation grid, respectively.
+
+\sec The visualizer
+The visualizer uses input file conforming to the format described in {~\ref[mapfir_solver_output_format]} to visualize the run of the generated simulation. It lets the user change the simulations speed and move through discrete time steps. Other features include selecting only single agent to display, stopping agent during the simulation and visual features such as hiding/showing of lines to goals.
+\mapfirGui 
