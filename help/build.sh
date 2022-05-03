@@ -5,11 +5,11 @@ presentation="0"
 if [ $presentation == "1" ]; then
    echo "Generating presentation"
    ROOT_FILE=prezentace_semestralni_projekt
-   OUTPUT_FILE=bakalarska_prace
+   OUTPUT_FILE=prezentace_semestralni_projekt
 else
    echo "Generating PDF work"
    ROOT_FILE=index
-   OUTPUT_FILE=semestralni_prace
+   OUTPUT_FILE=bakalarska_prace
 fi
 
 cd build && pdfcsplain -halt-on-error "$ROOT_FILE" && mv "${ROOT_FILE}.pdf" ../output/"${OUTPUT_FILE}.pdf" && cd ..
