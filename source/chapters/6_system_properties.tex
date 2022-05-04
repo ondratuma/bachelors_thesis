@@ -5,6 +5,26 @@ The main goal of this chapter is to describe and evaluate the properties of the 
 This section describes the process before the demonstration can be run. It includes updates from source code, building the robots, server, setting up connections and synchronizing all elements of demonstration.
 \secc New system
 In the new system, the preferred way to run the demostration is through the shell script "ciirc-exec.sh" in the project root.
+% \begin{lstlisting}[language=bash]
+% Commands for server:
+% ./ciirc-exec.sh server:init
+% ./ciirc-exec.sh server:update
+% ./ciirc-exec.sh server:build
+% ./ciirc-exec.sh server:start
+% ./ciirc-exec.sh server:stop
+% ./ciirc-exec.sh server:ssh
+
+% ----------------------------------
+% Commands for robots:
+% ./ciirc-exec.sh robots:ssh <robotId>
+% ./ciirc-exec.sh robots:init <robotId>
+% ./ciirc-exec.sh robots:update <robotId>
+% ./ciirc-exec.sh robots:update:all
+% ./ciirc-exec.sh robots:inspect <robotId>
+% ./ciirc-exec.sh robots:start <robotId>
+% ./ciirc-exec.sh robots:start:all
+% ./ciirc-exec.sh robots:stop
+% \end{lstlisting}
 \sec Demonstration setup user experience
 \sec Runtime behavior
 \sec Runtime user experience
