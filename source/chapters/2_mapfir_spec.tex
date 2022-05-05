@@ -17,8 +17,8 @@ The input format is as illustrated on ~\ref[mapfir_input_format] starting by the
 The next \uv{number of agents} lines are in the format sX sY gX gY where sX and sY are the x and y coordinates of the starting point, respectively, and gX, gY are the x and y coordinates of the goal, respectively. 
 
 \label[mapfir_solver_output_format]
-\secc{Output format}
-\mapfirOutputFormat 
+\begtt
+\endtt
 The output format is as illustrated on ~\ref[mapfir_output_format] with the important information being the number of agents on row 2, followed by starts coordinates on row 13 in format (x1, y1), (x2, y2)... (x[number of agents], y300[number of agents]),  where x and y are the respective coordinates for each agent identified by the index of its coordinates on the row. Followed by goals in the same format. Following are [makespan] lines each representing a single discrete timestep in the simulation, where each line has the coordinates of each agent in the above-mentioned format.
 
 \secc{General format expectations}
