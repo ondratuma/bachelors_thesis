@@ -23,6 +23,12 @@ Since one part of the application is built using makefile, and the other part us
 TurtleBot software is build using CMake.
 The sources for the rutlebot are in the "/src" directory, where the actual code resides in the "/src/agv_package/TurtleBot/" directory.
 \sec TurtleBot runtime
+At runtime, the TurtleBot uses the following ports.
+\begitems \style n
+    * single port defined in "/robot_definitions.txt" - listening for server connections
+    * Interacting with the canvas using framework APIs
+    * Rich set of GUI widgets (buttons, text fields, etc.)
+\enditems
 \sec Server build
 \sec Server runtime
 \sec Client build
