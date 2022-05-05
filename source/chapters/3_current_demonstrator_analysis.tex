@@ -18,3 +18,6 @@ The runtime behavior is consistent and reliable in its main functionality, that 
 \sec Server software analysis
 The software structure was split into the server runner thread, and serializable classes representing the individual messages. Other utility classes for time synchronization were also used, although their impact was negligible.
 \sec Robot software analysis
+\secc Navigation
+The navigation part proved to be well written and abstracted away the navigation problem completely. From the developer perspective, the whole abstraction usage can be simplified to two synchronous method calls "int driveToPosition(double x, double y, double time);" and "int turn (double angle)"
+\secc Runner
