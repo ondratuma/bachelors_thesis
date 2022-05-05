@@ -7,10 +7,11 @@ In this chapter I will take a detailed look at the inner workings of \mapfIR pro
 
 \sec Introduction
 {\mapfIR} consists of 2 parts. A solver and a visualizer. 
-The solver is a standalone \cmake application and the visualizer is using openFrameworks as in our case. This split is necessary as described in {~\ref[choosing_gui]}.
+The solver is a standalone \cmake application and the visualizer is using openFrameworks as in our case. This split is necessary as described in {~\ref[choosing_gui]}. The general workflow is to run the solver on a problem set as described in {~\ref[mapfir_solver_input]}
 
 \label[mapfir_solver]
 \sec The solver
+\label[mapfir_solver_input]
 \secc{Input format}
 \begtt
 map_file=arena.map
