@@ -6,7 +6,7 @@ In this chapter I will take a detailed look at the inner workings of SIPPDemonst
 \secc Map file
 The map file "Projekt_mapa4.xml" in the root of the directory was used as source for the navigation system on robots. The file is in xml format and consists of relatively simple definition of nodes, that are directly referred to by id from the qr codes placed on the laboratory floor. The rest of the map file was unused, but kept for possible backwards-compatibility. The rest of the file includes edges definition, describing the possible routes.
 \secc Execution plan
-The execution plan was also supplied in the xml format, providing list of n points relative to the grid coordinates for each robot, with duration for each step.  
+The execution plan was also supplied in the xml format, providing list of n points relative to the grid coordinates for each robot, with duration for each step. The coordinates were scaled relative to the grid coordinate system, and it was necessary to provide this scaling information at runtime for successfull coordinate transformation. This information is however not encoded in the file itself.
 \sec Components
 \sec Runtime behavior
 \sec Server software analysis
