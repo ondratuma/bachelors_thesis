@@ -33,6 +33,8 @@ At runtime, the TurtleBot uses the following ports.
 \sec Server
 \secc Vicon
 The laboratory is equipped with Vicon motion capture system, monitoring the area spanned by robots completely. The purpose of the system is to provide positions of defined known objects.\br
+The system consists of a central server, and high refresh rate motion cameras emplaced on the ceiling of the laboratory around the monitored area. Additional tooling is used to transform the source data from the Vicon system into network stream that can be consumed by other applications running on the local network.\br
+
 \sec Client build
 \sec Client runtime
 The GUI is implemented using {\of}. The GUI runs a single thread for main logic and event handling, one for the GUI application. Communication with server is directed through the Messenger abstraction, allowing uninterrupted handling of all events that might arise and providing smooth rendering for the application. 
