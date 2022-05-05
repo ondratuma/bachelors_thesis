@@ -22,6 +22,11 @@ if [ $presentation == "1" ]; then
    exit
 fi
 
+if [[ ! -f "output/${OUTPUT_FILE}.pdf" ]] ; then
+    echo file does not exists.
+    exit 1
+fi
+
 PAGE_TEXT=""
 x=1
 TEXT=$(pdftotext "output/${OUTPUT_FILE}.pdf" -)
