@@ -24,6 +24,7 @@ The navigation part proved to be well written and abstracted away the navigation
     * "int driveToPosition(double x, double y, double time);"
     * "int turn (double angle);"
 \enditems
+The underlying software abstracts away direct collision handling, during which the robots stops all further execution, to prevent any potential damage.
 
 \secc Runner
 The runner consisted of simple communication handler, calling the above mentioned navigation API, performing the desired tasks and returning the results.
