@@ -18,6 +18,24 @@ The next \uv{number of agents} lines are in the format sX sY gX gY where sX and 
 
 \label[mapfir_solver_output_format]
 \begtt
+instance=../instances/sample.txt
+agents=8
+map_file=lab.map
+solver=PIBT
+solved=1
+soc=3573
+lb_soc=3163
+makespan=4
+lb_makespan=4
+comp_time=4
+starts=(5,10),(6,10),(7,10),(8,10),(9,10),(10,10),(11,10),(12,10),
+goals=(5,10),(6,10),(7,10),(8,10),(9,10),(10,10),(11,10),(12,10),
+solution=
+0:(5,10),(6,10),(7,10),(8,10),(9,10),(10,10),(11,10),(12,10),
+1:(5,9),(6,9),(7,9),(8,9),(9,9),(10,9),(11,9),(12,9),
+2:(5,8),(6,8),(7,8),(8,8),(9,8),(10,8),(11,8),(12,8),
+3:(5,9),(6,9),(7,9),(8,9),(9,9),(10,9),(11,9),(12,9),
+4:(5,10),(6,10),(7,10),(8,10),(9,10),(10,10),(11,10),(12,10),
 \endtt
 The output format is as illustrated on ~\ref[mapfir_output_format] with the important information being the number of agents on row 2, followed by starts coordinates on row 13 in format (x1, y1), (x2, y2)... (x[number of agents], y300[number of agents]),  where x and y are the respective coordinates for each agent identified by the index of its coordinates on the row. Followed by goals in the same format. Following are [makespan] lines each representing a single discrete timestep in the simulation, where each line has the coordinates of each agent in the above-mentioned format.
 
