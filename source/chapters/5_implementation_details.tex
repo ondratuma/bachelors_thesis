@@ -30,8 +30,9 @@ At runtime, the TurtleBot uses the following ports.
     * single port defined in "/robot_definitions.txt" - server commands handling
     * 9980 - position feedback
 \enditems
-\sec Server build
-\sec Server runtime
+\sec Server
+\secc Vicon
+The laboratory is equipped with Vicon motion capture system, monitoring the area spanned by robots completely. The purpose of the system is to provide positions of defined known objects.\br
 \sec Client build
 \sec Client runtime
 The GUI is implemented using {\of}. The GUI runs a single thread for main logic and event handling, one for the GUI application. Communication with server is directed through the Messenger abstraction, allowing uninterrupted handling of all events that might arise and providing smooth rendering for the application. 
