@@ -1,6 +1,20 @@
-\documentclass{index}
-\usepackage{csplain}
-\usepackage{listings}
 
-\begin{document}
-\end{document}
+\input ../source/definitions
+\input ctustyle2
+
+\input opmac-bib
+\input ../source/params
+\input ../source/abstract
+\makefront
+\input ../source/chapters/1_introduction
+\input ../source/chapters/2_mapfir_spec
+\input ../source/chapters/3_current_demonstrator_analysis
+\input ../source/chapters/4_implementation_decisions
+\input ../source/chapters/5_implementation_details
+\input ../source/chapters/6_system_properties
+
+\bibchap
+\usebib/c (simple) mybase
+
+\bye
+\endtt
