@@ -3,6 +3,8 @@ In this chapter I will describe my implementation and the particular solutions u
 
 \sec Application architecture
 The application is split between server, frontend and robot part.
+
+\secc Communication
 Communicating through an abstract interface built upon \nanomsg.
 
 All parts of the application have shared utils classes. The main classes used for communication are Messenger\label[messenger]\wlabel{} (asynchronous handler for inbound/outbound messages) and Message (serializable container), providing an easy-to-use interface and abstracting the network layer away from the programmer. The basic hierarchy of used communication classes is illustrated below.
