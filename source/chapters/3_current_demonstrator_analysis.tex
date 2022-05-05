@@ -10,7 +10,7 @@ The execution plan was also supplied in the xml format, providing list of n poin
 \sec Components
 The whole demonstration application consisted of 2 distinct parts communicating over TCP in the local network.
 \secc Server
-The server compenent was expected to be run at static IP address "192.168.2.4".
+The server component was expected to be run at static IP address "192.168.2.4".This part of application was responsible for reading, parsing, converting the execution file into the grid coordinate system. Another of its responsibilities included handling connection from individual robots. Once connection to all robots have been established, the server would start sending individual commands to each robots, ensuring the order and timing of executed commands.
 \secc Robots
 \sec Runtime behavior
 \sec Server software analysis
