@@ -50,56 +50,11 @@ Most of the setting can be changed on the admin panel on the left side of the ap
 \secc Disctinct time step
 \secc ADG
 \midinsert
-\line{\hsize=.3333333333\hsize \vtop{%
-        \clabel[adg_step_1]{Krok 1}
-        \picw=4cm \cinspic {../assets/images/new_ui_adg_1.png}
-        \caption/f Krok 1
-   \par}\vtop{%
-        \clabel[adg_step_2]{Krok 2}
-        \picw=4cm \cinspic {../assets/images/new_ui_adg_3.png}
-        \caption/f Krok 2
-   \par}\vtop{%
-        \clabel[adg_step_3]{Krok 3}
-        \picw=4cm \cinspic {../assets/images/new_ui_adg_4.png}
-        \caption/f Krok 3
-   \par}}
-\line{\hsize=.3333333333\hsize \vtop{%
-   \clabel[adg_step_4]{Krok 4}
-   \picw=4cm \cinspic {../assets/images/new_ui_adg_5.png}
-   \caption/f Krok 4
-\par}\vtop{%
-   \clabel[adg_step_5]{Krok 5}
-   \picw=4cm \cinspic {../assets/images/new_ui_adg_6.png}
-   \caption/f Krok 5
-\par}\vtop{%
-   \clabel[adg_step_6]{Krok 6}
-   \picw=4cm \cinspic {../assets/images/new_ui_adg_7.png}
-   \caption/f Krok 6
-\par}}
-\line{\hsize=.3333333333\hsize \vtop{%
-   \clabel[adg_step_7]{Krok 7}
-   \picw=4cm \cinspic {../assets/images/new_ui_adg_8.png}
-   \caption/f Krok 7
-\par}\vtop{%
-   \clabel[adg_step_8]{Krok 8}
-   \picw=4cm \cinspic {../assets/images/new_ui_adg_9.png}
-   \caption/f Krok 8
-\par}\vtop{%
-   \clabel[adg_step_9]{Krok 9}
-   \picw=4cm \cinspic {../assets/images/new_ui_adg_10.png}
-   \caption/f Krok 9
-\par}}
-\line{\hsize=.3333333333\hsize \vtop{%
-   \clabel[adg_step_10]{Krok 12}
-   \picw=4cm \cinspic {../assets/images/new_ui_adg_8.png}
-   \caption/f Krok 10
-\par}\vtop{%
-   \clabel[adg_step_11]{Krok 11}
-   \picw=4cm \cinspic {../assets/images/new_ui_adg_9.png}
-   \caption/f Krok 11
-\par}\vtop{%
-   \clabel[adg_step_12]{Krok 12}
-   \picw=4cm \cinspic {../assets/images/new_ui_adg_10.png}
-   \caption/f Krok 12
-\par}}
+\newcount\X
+\X=1
+\loop
+\advance \X by 3
+\unless\ifnum \X>16
+\repeat
+
 \endinsert
