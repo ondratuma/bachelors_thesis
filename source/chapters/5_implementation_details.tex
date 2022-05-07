@@ -52,6 +52,9 @@ Most of the setting can be changed on the admin panel on the left side of the ap
 \midinsert
 \newcount\X
 \X=1
-
-
+\loop
+\advance \X by 3
+\unless\ifnum \X>16
+\repeat
+{\the\X}
 \endinsert
