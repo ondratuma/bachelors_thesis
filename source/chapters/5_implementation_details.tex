@@ -36,6 +36,7 @@ The laboratory is equipped with Vicon motion capture system, monitoring the area
 The system consists of a central server, and high refresh rate motion cameras emplaced on the ceiling of the laboratory around the monitored area. Additional tooling is used to transform the source data from the Vicon system into network stream that can be consumed by other applications running on the local network.\br
 The actual usage in the server is then relatively straightforward. Each robot is assigned a name in the Vicon system, that is referenced in the file with robot definitions in th root of the project. Afterwards, when the Vicon system is running, we are able to transform the output data into continuous stream of data, send it over the network to the Server, filter out only wanted objects, and save current position provided by Vicon for each robot. The final position for each robot is periodically transferred to Frontend primarily to save network bandwidth. But given the high refresh rate of the positioning system, and the relatively low speed of physical robots, the updating frequency was set to 100ms without any noticeable delay in the user interface.
 \sec Client build
+\vfil \break
 \sec Client runtime
 The GUI is implemented using {\of}. The GUI runs a single thread for main logic and event handling, one for the GUI application. Communication with server is directed through the Messenger abstraction, allowing uninterrupted handling of all events that might arise and providing smooth rendering for the application. 
 \fleetControlGui
