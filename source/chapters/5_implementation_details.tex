@@ -59,7 +59,9 @@ The admin panel allows the user to disable individual robots, which is useful, i
 
 \vfil \break
 \sec Environment setup
+\rfc{TODO}
 \sec Environment behavior
+\rfc{TODO}
 \br\br
 \sec Robot synchronization strategies
 The solver solves the problem set in discreet time steps. The solution should guarantee that the simulation will be run without collisions. Howewer, that can be quite inefficient, as in the real world, the speeds of individual robots may differ from the expected ones, and making all robots wait for single slow robot may lead to a bottlenect on the whole system. It is therefore desirable to be able to break the disctinct step barrier. That may, however, break the consistency of the plan, and introduce potential collisions. Once we disable this implicit safeguard, it is necessary to introduce additional, possibly more efficient solution, that will prevent collisions and enable the simulation to run without inconsistencies.\br
