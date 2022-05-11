@@ -7,8 +7,8 @@ In this chapter I will take a detailed look at the inner workings of {\mapfIR} p
 }.\br\br
 {\mapfIR} consists of 2 parts. A solver and a visualizer. 
 \begmulti 2
-The solver is a standalone {\cmake} application. \vfil\break 
-The visualizer is based on {\of} and is built using {\makefile}.\break 
+The solver is a standalone {\cmake} application. It is a simple cli binary executable, that allows the user to generate execution plan based on problem definition. It supports multiple planning algorithms, that can be switched using command line arguments. \vfil\break 
+The visualizer is based on {\of} and is built using {\makefile}. It is used to visualize the output of the solver once it has been generated. The user is able to change the visualization speed, and highlight particular robots.\break 
 \endmulti
 This split is necessary as described in {~\ref[choosing_gui]}. The general workflow is to:
 \begitems \style n
