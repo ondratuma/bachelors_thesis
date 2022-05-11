@@ -17,7 +17,7 @@ The asynchronous nature of the communication can be seen in the sequence diagram
 \communicationSequence
 
 The asynchronous handlers allow both applications to run in the main thread performing latency-sensitive tasks. The current implementation uses thread per messenger, mainly to eliminate application-wide locking and shared state, but another more optimal approach could be single static event loop for all messengers. It would be more efficient, but could introduce hard to debug bugs where one Messenger instance could affect every other messenger. It was decided to go with the threaded implementation. But the Messenger architecture makes it possible to simple change the implementation if it proves to have additional benefits.
-
+\label[shared_resources]
 \sec Shared resources
 Since one part of the application is built using \makefile, and the other part using \cmake, it made sharing code across parts of the application more difficult. The configuration of \of only allows one user defined include directory, so all the shared files have flat structure in the "{projectRoot}/FleetControl/modules/utils/Comm".
 \sec TurtleBot build
@@ -31,6 +31,9 @@ At runtime, the TurtleBot uses the following ports.
     * 9980 - position feedback
 \enditems
 \sec Server
+
+The server code resides in the /FleetControl/modules/app directory. The only other code it touches should be 
+
 \secc Vicon
 The laboratory is equipped with {\vicon} motion capture system, monitoring the area spanned by robots completely. The purpose of the system is to provide positions of defined known objects.\br
 The system consists of a central server, and high refresh rate motion cameras emplaced on the ceiling of the laboratory around the monitored area. Additional tooling is used to transform the source data from the {\vicon} system into network stream that can be consumed by other applications running on the local network.\br
