@@ -20,7 +20,7 @@ The whole demonstration application consisted of 2 distinct parts communicating 
 The server component was expected to be run at static IP address "192.168.2.4".This part of application was responsible for reading, parsing, converting the execution file into the grid coordinate system. Another of its responsibilities included handling connection from individual robots. Once connection to all robots have been established, the server would start sending individual commands to each robots, ensuring the order and timing of executed commands.
 \secc Robots
 The base of the software running on robots consists of ROS package, module responsible for navigation on the grid and simple communication layer executing commands received from the server.
-The internal representation of the grid can be seen below on figure ~\ref[robot_grid]. All robot movement is calculated and realized relatively to this grid representation. The numbers on the individual grid tiles are embedded in the QR codes on the laboratory floor, and are the ids of the nodes in "Projekt_mapa4.xml" file. X represents missing node.
+The internal representation of the grid can be seen below on figure ~\ref[robot_grid]. All robot movement is calculated and realized relatively to this grid representation. The numbers on the individual grid tiles are embedded in the QR codes on the laboratory floor, and are the ids of the nodes in "Projekt_mapa4.xml" file. X represents missing node/obstacle.
 \robotGrid
 \sec Runtime behavior
 The runtime behavior is consistent and reliable in its main functionality, that is inherently limited by the purpose of the software.
