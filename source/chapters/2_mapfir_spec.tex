@@ -21,7 +21,8 @@ Although the project description says it does support only macOs, there seems to
 \sec The solver
 This section aims to describe the solver and analyze the input and output formats used by the solver. This formatting will be important when migrating our application from \oldFormat.
 \secc Solver description
-{\uv {The implementations include: HCA* and WHCA* [1], PIBT [2], CBS [3], ICBS [4], ECBS [5], Revisit Prioritized Planning [6], Push and Swap [7], winPIBT [8], PIBT+, and IR (Iterative Refinement).
+The solver is used to generate execution plan in discreet time steps. It is focusing solely on the generation of static plans. It currently supports the following algorithms.
+{\uv {HCA* and WHCA* [1], PIBT [2], CBS [3], ICBS [4], ECBS [5], Revisit Prioritized Planning [6], Push and Swap [7], winPIBT [8], PIBT+, and IR (Iterative Refinement).
 }}\cite[MAPFIR:REPO_DESCRIPTION]
 \label[mapfir_solver_input]
 \secc{Input format}
