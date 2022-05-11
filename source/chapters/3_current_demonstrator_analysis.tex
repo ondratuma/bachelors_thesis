@@ -14,22 +14,8 @@ Example node
 \endtt
 \secc Execution plan
 The execution plan was also supplied in the xml format, providing list of n points relative to the grid coordinates for each robot, with duration for each step. The coordinates were scaled relative to the grid coordinate system, and it was necessary to provide this scaling information at runtime for successful coordinate transformation. This information is however not encoded in the file itself.\br
-Single robot execution plan could look like this
-\begtt
-<agent id="5" start.x="37" start.y="37" start.heading="180" goal.x="39" goal.y="11" goal.heading="90" size="0.40000001" movespeed="0.25" rotationspeed="0.2">
-            <path pathfound="true" runtime="0.0026935136" duration="119.83047">
-                <section id="0" start.x="37" start.y="37" start.heading="180" goal.x="37" goal.y="37" goal.heading="99.462318" duration="2.2371578"/>
-                <section id="1" start.x="37" start.y="37" start.heading="99.462318" goal.x="36" goal.y="31" goal.heading="99.462318" duration="24.331051"/>
-                <section id="2" start.x="36" start.y="31" start.heading="99.462318" goal.x="36" goal.y="31" goal.heading="97.594643" duration="0.051879968"/>
-                <section id="3" start.x="36" start.y="31" start.heading="97.594643" goal.x="34" goal.y="16" goal.heading="97.594643" duration="60.530983"/>
-                <section id="4" start.x="34" start.y="16" start.heading="97.594643" goal.x="34" goal.y="16" goal.heading="53.130104" duration="1.2351261"/>
-                <section id="5" start.x="34" start.y="16" start.heading="53.130104" goal.x="37" goal.y="12" goal.heading="53.130104" duration="20"/>
-                <section id="6" start.x="37" start.y="12" start.heading="53.130104" goal.x="37" goal.y="12" goal.heading="26.565052" duration="0.73791808"/>
-                <section id="7" start.x="37" start.y="12" start.heading="26.565052" goal.x="39" goal.y="11" goal.heading="26.565052" duration="8.944272"/>
-                <section id="8" start.x="39" start.y="11" start.heading="26.565052" goal.x="39" goal.y="11" goal.heading="90" duration="1.7620819"/>
-            </path>
-        </agent>
-\endtt
+Single robot execution plan can be seen on ~\ref[robot_execution_plan]
+\robotExecutionPlan
 \sec Components
 The whole demonstration application consisted of 2 distinct parts communicating over TCP in the local network.
 \secc Server
