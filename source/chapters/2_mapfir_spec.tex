@@ -6,7 +6,11 @@ In this chapter I will take a detailed look at the inner workings of {\mapfIR} p
     }\cite[MAPFIR:REPO_DESCRIPTION]
 }.\br\br
 {\mapfIR} consists of 2 parts. A solver and a visualizer. 
-The solver is a standalone {\cmake} application and the visualizer is based on {\of} and is built using {\makefile}. This split is necessary as described in {~\ref[choosing_gui]}. The general workflow is to run the solver on a problem set as described in {~\ref[mapfir_solver_input]}, creating output in format described in {~\ref[mapfir_solver_output_format]} and visualize the solution using the visualizer {~\ref[mapfir_visualizer]}.\br
+The solver is a standalone {\cmake} application and the visualizer is based on {\of} and is built using {\makefile}. This split is necessary as described in {~\ref[choosing_gui]}. The general workflow is to:
+\begitems \style n
+    * run the solver on a problem set as described in {~\ref[mapfir_solver_input]}, creating output in format described in {~\ref[mapfir_solver_output_format]} 
+\enditems
+ and visualize the solution using the visualizer {~\ref[mapfir_visualizer]}.\br
 Although the project description says it does support only macOs, there seems to be no problem compiling and running under linux. This seems to be coming from the lack of documentation, and documentation in outdated state whenever it actually exists. This seems to be a common pattern for the {\of} applications and the main repository.
 
 \label[mapfir_solver]
