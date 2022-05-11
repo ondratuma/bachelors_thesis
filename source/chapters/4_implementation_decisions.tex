@@ -21,14 +21,15 @@ The developers are rather defensive about migrating build systems. The recommend
 This would break the main benefit of the framework, extensibility, while the time investment necessary would certainly overrun the budget for this thesis.
 
 \hfill \break
-There appear to be a few attempts to do this. Unfortunately, the vast majority of them is out of date and unusable without heavy modifications. During the preparation for this thesis, I tried to setup all of them, without success, as they are out of date.
+There appear to be a few attempts to do this. Unfortunately, the vast majority of them is out of date and unusable without heavy modifications. During the preparation for this thesis, I tried to setup all of them, without success, as they are out of date. Below are few example approaches to this problem.
 
 
 
 The first one being \ofxCMake. It attempts to provide the package as {\of} addon. Unfortunately, the latest version is from Aug 13, 2017, and there seems to be no active development keeping it in sync. 
 
-Another one being \ofnode, taking a different approach. It has its own fork of {\of} repository, with mappings for {\cmake}. The latest version is from on Nov 7, 2018. I ran into several issues with system libraries with this version and was not able to compile even the bare repository.
-It was then decided, that it would be most beneficial to split the GUI into separate application using the {\makefile}.
+Another one being \ofnode, taking a different approach. It has its own fork of the whole{\of} repository, with mappings for {\cmake}. The fork approach introduces inevitable split from the main branch, implicitly keeping it out of sync with no support for new features. \br
+The latest version is from on Nov 7, 2018. I ran into several issues with system libraries with this version and was not able to compile even the bare repository.
+It was then decided, that it would be most beneficial to split the GUI into separate application and keep using the framework as intended by the authors.
 
 \sec GUI implementation considerations
 First aspect was speed. The simulation might run hundreds of robots, depending on the simulation. So on each robot move, it is necessary to send the minimal amount of information required in order to keep the latency to a minimum. 
