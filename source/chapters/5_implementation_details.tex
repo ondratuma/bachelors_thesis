@@ -33,7 +33,7 @@ At runtime, the TurtleBot uses the following ports.
 \enditems
 \br
 It acts on the instructions by using the position api provided by the underlying layer {~\ref[position_api]}. 
-The robot is the only component that should be aware of it's shifted grid relative to the standard cartesian coordinate system beginning in (0, 0). Therefore, it performs translation for each command received, and for all position information it sends to the server.
+The robot is the only component that should be aware of it's shifted grid relative to the standard cartesian coordinate system beginning in (0, 0). Therefore, it performs translation for each command received, and for all position information it sends to the server. 
 
 \sec Server
 The general idea behind the server architecture is that it should mainly handle the execution of the demonstration, while aggregating data from {\vicon} and robots, and synchronizing them to frontend. \br
@@ -75,6 +75,10 @@ The GUI, as visualized on ~\ref[fleet_control_user_interface], displays robot po
 \endinsert
 Most of the setting can be changed on the admin panel {~\ref[fleet_control_admin_panel]} on the left side of the application window.\br
 The admin panel allows the user to disable individual robots, which is useful, if some of the robots battery died, but the remaining robots are still good enough for demonstration purposes. The system then does not send new commands to the disabled robots. The options may be reset even during demonstration run, so this option might by used to consistently test the synchronization algorithms, by making a robot blocked, while still being part of the execution plan. Below is the option to change the position provider for the positions showing in user interface. This option does not override the robot's internal positioning system. The default option is Robot, as the {\vicon} startup time is not insignificant, the cameras have limited live span and for the majority of demonstration runs the feedback from robots give the same information within an acceptable margin of error. The simulation can be started using the "start simulation" button. This also allows the user to disable the simulation again after the start of the execution, preventing the server from sending any new commands to any of the active robots.\br
+
+\sec Coordinate system
+\finalGrid
+The coordinate system used across the system is relative to the output of the solver. Starting at point (0, 0) in the lower left corder of the demonstration grid just for convention.
 
 \vfil \break
 \sec Environment setup
