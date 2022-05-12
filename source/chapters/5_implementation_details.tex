@@ -41,6 +41,15 @@ The actual usage in the server is then relatively straightforward. Each robot is
 
 \secc Network communication
 The server is the only component of the application, that is aware of more than one other component. It server as a central point for all other components. It communicates with the frontend, with each of the robots and {\vicon}.
+
+The following ports should be used 
+\begitems \style x
+    * 1 port per robot for command execution
+    * 1 port per robot for position feedback
+    * 1 port for Vicon
+    * 5 ports for Frontend connections
+\enditems
+
 \sec Frontend build
 
 \sec Frontend runtime
