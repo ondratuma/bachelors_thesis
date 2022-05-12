@@ -81,10 +81,6 @@ The admin panel allows the user to disable individual robots, which is useful, i
 The reference coordinate system used across the system is relative to the output of the solver. Starting at point (0, 0) in the lower left corner of the demonstration grid just for convention. The robots have the coordinate system shifted and scaled by 0.7. The beginning of the Vicon coordinate system can be seen highlighted in green. The robot coordinate system scale is roughly equivalent to the scale of Vicon, meaning that distance between two neighboring nodes is roughly 0.7.\br
 The translation from Vicon coordinate system to the base one happens on the server right after the reception of Vicon data and no other system component is aware of the different coordinate system used by Vicon.
 The translation from base to Robot and in reverse happens on robot, and no other system component is aware of the different coordinate system used by Robots.
-
-\vfil \break
-
-\br\br
 \label[synchronization_strategy]
 \sec Robot synchronization strategies
 The solver solves the problem set in discreet time steps. The solution should guarantee that the simulation will be run without collisions. Howewer, that can be quite inefficient, as in the real world, the speeds of individual robots may differ from the expected ones, and making all robots wait for single slow robot may lead to a bottlenect on the whole system. It is therefore desirable to be able to break the disctinct step barrier. That may, however, break the consistency of the plan, and introduce potential collisions. Once we disable this implicit safeguard, it is necessary to introduce additional, possibly more efficient solution, that will prevent collisions and enable the simulation to run without inconsistencies.\br
