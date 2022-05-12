@@ -27,6 +27,7 @@ The base of the software running on robots consists of ROS package, module respo
 The software structure was split into the server runner thread, and serializable classes representing the individual messages. Other utility classes for time synchronization were also used, although their impact was negligible. The communication with robots happened in a loop in the server thread.\br
 During later stage, there were found some rather critical bugs in the NanoMsg abstraction used by both the server and client, that resulted in array out of bounds write and corruption of the stack, when the server IP address length increased. This, did not however affect the original project, as the server IP was static and relatively short.
 \sec Robot software analysis
+\label[position_api]
 \secc Navigation
 The navigation part proved to be well written and abstracted away the navigation problem completely. From the developer perspective, the whole abstraction usage can be simplified to two synchronous method calls 
 \begitems \style x

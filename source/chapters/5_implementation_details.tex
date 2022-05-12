@@ -31,6 +31,9 @@ At runtime, the TurtleBot uses the following ports.
     * single port defined in "/robot_definitions.txt" - server commands handling
     * 9980 - position feedback
 \enditems
+\br
+It acts on the instructions by using the position api provided by the underlying layer {~\ref[position_api]}. 
+
 \sec Server
 The general idea behind the server architecture is that it should mainly handle the execution of the demonstration, while aggregating data from {\vicon} and robots, and synchronizing them to frontend. \br
 The execution of the demonstration should be guided by the synchronization strategy {\ref[synchronization_strategy]} currently selected.\br\br
