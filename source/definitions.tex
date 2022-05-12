@@ -97,16 +97,3 @@
     \caption/f Overlayed coordinate systems
     \endinsert
 } 
-
-\def\begttBlack{\ttskip\vskip.5\parskip\bgroup \aftergroup\parskipcorr\wipeepar
-   \setverb \adef{ }{ }%
-   \ifx\savedttchar\undefined \else \catcode\savedttchar=12 \fi
-   \parindent=\ttindent
-   \tthook\relax
-   \everypar={\rlap{\locc 
-    \hskip-\ttindent \vrule width\hsize \strut}%
-    \ifnum\ttline<0 \else \global\advance\ttline by1
-                \llap{\locc\sevenss\the\ttline\kern.5em\indent}\fi \kern2pt\Black}
-   \def\par##1{\endgraf\ifx##1\egroup\else\penalty\ttpenalty\vskip-1pt\leavevmode\fi ##1}
-   \obeylines \startverb
-}
