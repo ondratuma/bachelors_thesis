@@ -33,6 +33,7 @@ At runtime, the TurtleBot uses the following ports.
 \enditems
 \br
 It acts on the instructions by using the position api provided by the underlying layer {~\ref[position_api]}. 
+The robot is the only component that should be aware of it's shifted grid relative to the standard cartesian coordinate system beginning in (0, 0). Therefore, it performs translation for each command received, and for all position information it sends to the server.
 
 \sec Server
 The general idea behind the server architecture is that it should mainly handle the execution of the demonstration, while aggregating data from {\vicon} and robots, and synchronizing them to frontend. \br
