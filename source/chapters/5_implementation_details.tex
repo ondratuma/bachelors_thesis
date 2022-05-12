@@ -21,19 +21,18 @@ The asynchronous handlers allow both applications to run in the main thread perf
 \secc Shared resources
 Since one part of the application is built using \makefile, and the other part using \cmake, it made sharing code across parts of the application more difficult. The configuration of \of only allows one user defined include directory, so all the shared files have flat structure in the "{projectRoot}/FleetControl/modules/utils/Comm".
 \sec TurtleBot
-\secc Build
+The software running directly on TurtleBot is based on ROS. Its main purpose is to receive commands from the server and broadcasts its position. 
+It acts on the instructions by using the position API provided by the underlying layer described in {~\ref[position_api]}. It also performs translations to and from its grid coordinate system. The robot is the only component that should be aware of it's shifted grid relative to the standard cartesian coordinate system beginning in (0, 0).
+
 TurtleBot software is build using CMake.
 The sources for the TurtleBot are in the "/src" directory, where the actual code resides in the "/src/agv_package/TurtleBot/" directory.
-\secc Runtime
-After TurtleBot is started, it listens for instructions from the server and broadcasts its perceived position.
+
 At runtime, the TurtleBot uses the following ports.
 \begitems \style x
     * single port defined in "/robot_definitions.txt" - server commands handling
     * 9980 - position feedback
 \enditems
 \br
-It acts on the instructions by using the position api provided by the underlying layer {~\ref[position_api]}. 
-The robot is the only component that should be aware of it's shifted grid relative to the standard cartesian coordinate system beginning in (0, 0). Therefore, it performs translation for each command received, and for all position information it sends to the server. 
 
 \sec Server
 The general idea behind the server architecture is that it should mainly handle the execution of the demonstration, while aggregating data from {\vicon} and robots, and synchronizing them to frontend. \br
