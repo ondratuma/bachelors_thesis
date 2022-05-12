@@ -21,10 +21,10 @@ The asynchronous handlers allow both applications to run in the main thread perf
 \sec Shared resources
 Since one part of the application is built using \makefile, and the other part using \cmake, it made sharing code across parts of the application more difficult. The configuration of \of only allows one user defined include directory, so all the shared files have flat structure in the "{projectRoot}/FleetControl/modules/utils/Comm".
 \sec TurtleBot
-\secc build
+\secc Build
 TurtleBot software is build using CMake.
 The sources for the TurtleBot are in the "/src" directory, where the actual code resides in the "/src/agv_package/TurtleBot/" directory.
-\secc runtime
+\secc Runtime
 After TurtleBot is started, it listens for instructions from the server and broadcasts its perceived position.
 At runtime, the TurtleBot uses the following ports.
 \begitems \style x
