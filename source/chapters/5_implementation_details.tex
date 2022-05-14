@@ -47,7 +47,7 @@ The system consists of a central server, and high refresh rate motion cameras em
 The actual usage in the server is then relatively straightforward. Each robot is assigned a name in the {\vicon} system, that is referenced in the file with robot definitions in the root of the project. Afterwards, when the {\vicon} system is running, we are able to transform the output data into continuous stream of data, send it over the network to the Server, filter out only wanted objects, and save current position provided by {\vicon} for each robot. The final position for each robot is periodically transferred to Frontend primarily to save network bandwidth. But given the high refresh rate of the positioning system, and the relatively low speed of physical robots, the updating period was set to 100ms without any noticeable delay in the user interface.
 
 \secc Network communication
-The server is the only component of the application, that is aware of more than one other component. It server as a central point for all other components. It communicates with the frontend, with each of the robots and {\vicon}.
+The server is the only component of the application, that is aware of more than one other component. It serves as a central point for all other components. It communicates with the frontend, with each of the robots and {\vicon}.
 
 The following ports should be used 
 \begitems \style x
