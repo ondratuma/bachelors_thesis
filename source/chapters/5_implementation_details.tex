@@ -96,7 +96,7 @@ The second currently implemented approach is to construct action dependency grap
 \vfil \break
 \secc Demonstration
 On the figures {~\ref[adg_step_1]}-{~\ref[adg_step_15]} you can see part of the execution using ADG. The figures are not spaced evenly relative to the simulation time, rather selected to represent significant events during the execution. \br
-Before the {~\ref[adg_step_3]}, the execution is running normally. However, somewhere between {~\ref[adg_step_2]} and {~\ref[adg_step_3]}, the green robot has been delayed. In order to continue execution, the red robot has to wait. This is represented by having the currently waiting robot's grid block highlighted in red, as can be seen in {~\ref[adg_step_3]}.
+Before figure {~\ref[adg_step_3]}, the execution is running normally. However, somewhere between {~\ref[adg_step_2]} and {~\ref[adg_step_3]}, the green robot has been delayed. In order to continue execution, the red robot has to wait. This is represented by having the currently waiting robot's grid block highlighted in red, as can be seen in {~\ref[adg_step_3]}.
 The red robot continues to wait, until the next node in its desired path is free (from the ADG perspective) {~\ref[adg_step_7]}. Meaning that every robot, who planned to travel through the node before this one already did so. The inverse situation, where robot 3 is blocked by robot 1 can be seen on {~\ref[adg_step_12]}, {~\ref[adg_step_13]}. The rest of the demonstration does not need to avoid any collisions, it is therefore not included in this example. The robots will just return to their initial positions without any unexpected behavior.
 
 \midinsert
