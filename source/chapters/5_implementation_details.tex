@@ -75,7 +75,7 @@ The GUI, as visualized on ~\ref[fleet_control_user_interface], displays robot po
    \caption/f Plan highlight
 \par}}
 \endinsert
-Most of the setting can be changed on the admin panel {~\ref[fleet_control_admin_panel]} on the left side of the application window.\br
+Most of the setting can be changed in the \link[ref:fleet_control_admin_panel]{admin panel} on the left side of the application window.\br
 The admin panel allows the user to disable individual robots, which is useful, if some of the robots battery died, but the remaining robots are still good enough for demonstration purposes. The system then does not send new commands to the disabled robots. The options may be reset even during demonstration run, so this option might by used to consistently test the synchronization algorithms, by making a robot blocked, while still being part of the execution plan. Below is the option to change the position provider for the positions showing in user interface. This option does not override the robot's internal positioning system. The default option is Robot, as the {\vicon} startup time is not insignificant, the cameras have limited live span and for the majority of demonstration runs the feedback from robots give the same information within an acceptable margin of error. The simulation can be started using the "start simulation" button. This also allows the user to disable the simulation again after the start of the execution, preventing the server from sending any new commands to any of the active robots.\br
 
 \sec Coordinate system
