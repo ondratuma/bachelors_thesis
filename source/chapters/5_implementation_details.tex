@@ -39,7 +39,7 @@ At runtime, the TurtleBot uses the following ports.
 \sec Server
 The general idea behind the server architecture is that it should mainly handle the execution of the demonstration, while aggregating data from {\vicon} and robots, and synchronizing them to frontend. \br
 The execution of the demonstration should be guided by the synchronization strategy {\ref[synchronization_strategy]} currently selected.\br\br
-The server code resides in the /FleetControl/modules/app directory. The only other code it touches should be the {Shared resources}~\ref[shared_resources].\br
+The server code resides in the /FleetControl/modules/manager directory. The only other code it touches should be the {Shared resources}~\ref[shared_resources].\br
 
 \secc Vicon
 The laboratory is equipped with {\vicon} motion capture system, monitoring the area spanned by robots completely. The purpose of the system is to provide positions of defined known objects.\br
@@ -59,6 +59,7 @@ The following ports should be used at runtime
 
 \sec GUI
 The GUI is implemented using {\of}. The GUI runs a single thread for main logic and event handling, and another one for the GUI application. Communication with server is directed through the Messenger abstraction, allowing uninterrupted handling of all events that might arise and providing smooth rendering for the application. All synchronous events and rendering happen in the main event loop of {\of}, providing centralized state for the whole component.
+The code resides in "{projectRoot}/FleetControl/modules/app" directory
 \fleetControlGui
 \break
 The GUI, as visualized on ~\ref[fleet_control_user_interface], displays robot positions based on position data from robots, or alternatively connection to the {\vicon} system, allowing the user to browse all time steps and show available information about them. It also provides the user with the ability to disable individual agents for a given simulation run and to completely start and stop the simulation run.
