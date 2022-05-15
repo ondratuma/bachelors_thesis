@@ -28,7 +28,7 @@ The solver is used to generate an execution plan in discreet time steps. It focu
 \label[mapfir_solver_input]
 \secc{Input format}
 The input is description of the path-finding problem that is given to the solver, which in turn tries to create a solution for given problem set.
-\ttline 1
+\ttline 0
 \begtt
 map_file=arena.map
 agents=300
@@ -42,13 +42,13 @@ max_comp_time=30000
 19,35,42,30
 8,21,2,18
 \endtt
-\ttline 0
 The input format is illustrated above. The file starts with the name of a map file on the first line, continuing with the number of agents on the second line, followed by the seed of the problem and by two time configuration options.
 The next \uv{number of agents} lines are in the format $s_x$ $s_y$ $g_x$ $g_y$ where $s_x$ and $s_y$ are the x and y coordinates of the starting point, respectively, and $g_x$, $g_y$ are the x and y coordinates of the goal, respectively. 
 
 \label[mapfir_solver_output_format]
 \secc{Output format}
 The output file is solution to a given path-finding problem on a given map, with additional metadata included.
+\ttline 0
 \begtt
 instance=instances/arena_300agents_1.txt
 agents=300
