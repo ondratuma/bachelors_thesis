@@ -33,6 +33,20 @@ The server component was expected to be run at static IP address "192.168.2.4".T
 \secc Robots
 The robot used is TurtleBot 2. {\uv {TurtleBot is a low-cost, personal robot kit with open-source software.}}\cite[turtlebot]. {\uv {The TurtleBot kit consists of a mobile base, 2D/3D distance sensor, laptop computer or SBC(Single Board Computer), and the TurtleBot mounting hardware kit.}}\cite[turtlebot]
 
+
+\midinsert
+\line{\hsize=.5\hsize \vtop{%
+        \clabel[robot_front]{Robot front}
+        \picw=4.7cm \cinspic {../assets/images/robot_front.png}
+        \caption/f Robot front view
+   \par}\vtop{%
+        \clabel[robot_rear]{Robot rear}
+        \picw=4.7cm \cinspic {../assets/images/robot_rear.png}
+        \caption/f Robot rear view
+   \par}}
+\endinsert
+
+
 The base of the software running on robots consists of a {\link[ref:ros]{\Black}{\it ROS package}}, a module responsible for navigation on the grid, and a simple communication layer executing the commands received from the server. This layer will be referred to as "runner" in the rest of this thesis. The robots were only responsible for executing the individual commands and had no context of the whole simulation or other robots.
 
 \sec Environment
