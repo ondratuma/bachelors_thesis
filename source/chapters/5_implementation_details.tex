@@ -21,7 +21,7 @@ The asynchronous handlers allow both applications to run in the main thread perf
 During the implementation of the above-mentioned mechanisms, great measures were taken to avoid race conditions. The Messenger has an implementation of Lamport's logical clock, assuring the order of messages for each Message type. This is mainly to prevent the user from updating a state on the server based on a non-actual version.
 \label[shared_resources]
 \secc Shared resources
-Since one part of the application is built using \makefile, and the other part using \cmake, it made sharing code across parts of the application more difficult. The configuration of \of only allows one user defined include directory, so all the shared files have flat structure in the "{projectRoot}/FleetControl/modules/utils/Comm" directory.
+Since one part of the application is built using \makefile, and the other part using \cmake, it made sharing code across parts of the application more difficult. The configuration of {\of} only allows one user defined include directory, so all the shared files have flat structure in the "{projectRoot}/FleetControl/modules/utils/Comm" directory.
 \sec TurtleBot
 The software running directly on TurtleBot is based on ROS. Its main purpose is to receive commands from the server and broadcasts its position. 
 It acts on the instructions by using the position API provided by the underlying layer described in {~\ref[position_api]}. It also performs translations to and from its grid coordinate system. The robot is the only component that should be aware of it's shifted grid relative to the standard cartesian coordinate system beginning in (0, 0).
