@@ -41,7 +41,7 @@ The navigation part proved to be well written and abstracted away the navigation
     * "int driveToPosition(double x, double y, double time);"
     * "int turn (double angle);"
 \enditems
-The internal representation of the grid can be seen below in figure ~\ref[robot_grid]. All robot movement is calculated and realized relatively to this grid representation. The numbers on the individual grid tiles are embedded in the QR codes on the laboratory floor and are the ids of the nodes in "Projekt_mapa4.xml" file. X represents missing node/obstacle.
+The internal representation of the grid can be seen below in figure ~\ref[robot_grid]. All robot movement is calculated and realized relatively to this grid representation. The numbers on the individual grid tiles are embedded in the QR codes on the laboratory floor and are the ids of the nodes in the "Projekt_mapa4.xml" file. X represents missing node/obstacle.
 \robotGrid
 As additional safety measure, the underlying software abstracts away direct collision handling, during which the robots stops all further execution, to prevent any potential damage.
 
