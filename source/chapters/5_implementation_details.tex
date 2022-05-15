@@ -51,10 +51,10 @@ The server is the only component of the application that is aware of more than o
 
 The following ports should be used at runtime.
 \begitems \style x
-    * 1 port per robot for command execution
-    * 1 port per robot for position feedback
-    * 1 port for Vicon
-    * 5 ports for frontend connections
+    * single port per robot for command execution
+    * single port per robot for position feedback
+    * single port for Vicon
+    * multiple ports for frontend connections (1 for each message type)
 \enditems
 
 \sec GUI
