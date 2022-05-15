@@ -57,7 +57,7 @@ The following ports should be used at runtime.
     * multiple ports for frontend connections (1 for each message type)
 \enditems
 
-\sec GUI
+\sec Graphical user interface
 The GUI is implemented using {\of}. The GUI runs a single thread for main logic and event handling and another one for the GUI application. Communication with the server is directed through the Messenger abstraction, allowing uninterrupted handling of all events that might arise and providing smooth rendering for the application. All synchronous events and rendering happen in the main event loop of {\of}, providing a centralized state for the whole component.
 The code resides in "{projectRoot}/FleetControl/modules/app" directory
 \fleetControlGui
