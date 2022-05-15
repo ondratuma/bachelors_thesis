@@ -29,7 +29,7 @@ The first one being {\ofxCMake}. It attempts to provide the package as {\of} add
 
 Another one being {\ofnode}, taking a different approach. It has its own fork of the whole {\of} repository, with mappings for {\cmake}. The fork approach introduces inevitable split from the main branch, implicitly keeping it out of sync with no support for new features. \br
 The latest version is from Nov 7, 2018. I ran into several issues with system libraries with this version and was not able to compile even the bare repository.\br\br
-From the forums, it seems that both approaches had been working for at least a few users for some time. The main issue with both approaches seems to be the development outside of the main repository, which led to their deprecation, as the developers had to maintain it themselves, what both of them stopped doing.
+From the forums, it seems that both approaches had been working for at least a few users for some time. The main issue with both approaches seems to be the development outside of the main repository, which led to their deprecation, as the developers had to maintain it themselves, which both of them stopped doing.
 It was then decided, that it would be most beneficial to split the GUI into separate application and keep using the framework as intended by the authors, as the approach to port it to {\cmake} had been tried before, and as we can see, it did not work in the long term.\br\br
 The implementation will be, however, done with the possible switch to single application in mind, trying to abstract most of the communication away from the developer, making the switch relatively easy, were the developers ever to introduce {\cmake} support.
 
