@@ -7,7 +7,7 @@ In this chapter, I will take a detailed look at the inner workings of the {\mapf
 }.\br\br
 The project consists of 2 parts.
 \begmulti 2
-{\bf The solver} is a standalone {\cmake} application. It generates a simple CLI binary executable, that allows the user to generate an execution plan based on a problem definition. It supports multiple planning algorithms, that can be switched using command line arguments. \vfil\break 
+{\bf The solver} is a standalone {\cmake} application. It generates a simple CLI binary executable, that allows the user to generate an execution plan based on a problem definition. It supports multiple planning algorithms, that can be switched using the command line arguments. \vfil\break 
 {\bf The visualizer} is based on {\of} and is built using {\makefile}. It is used to visualize the output of the solver once it has been generated. The user is able to change the visualization speed and highlight particular robots.\break 
 \endmulti
 This split is necessary as described in {~\ref[choosing_gui]}. The general workflow is to:
