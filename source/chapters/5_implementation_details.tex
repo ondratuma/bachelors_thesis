@@ -26,7 +26,7 @@ Since one part of the application is built using \makefile, and the other part u
 The software running directly on TurtleBot is based on ROS. Its main purpose is to receive commands from the server and broadcasts its position. 
 It acts on the instructions by using the position API provided by the underlying layer described in {~\ref[position_api]}. It also performs translations to and from its grid coordinate system. The robot is the only component that should be aware of its shifted grid relative to the standard cartesian coordinate system beginning in (0, 0).
 
-TurtleBot software is build using CMake.
+TurtleBot software is built using CMake.
 The sources for the TurtleBot are in the "/src" directory, where the actual code resides in the "/src/agv_package/TurtleBot/" directory.
 
 At runtime, the TurtleBot uses the following ports.
