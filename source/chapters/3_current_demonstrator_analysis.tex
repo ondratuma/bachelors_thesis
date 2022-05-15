@@ -27,7 +27,7 @@ A single robot execution plan can be seen on ~\ref[robot_execution_plan]
 \sec Components
 The whole demonstration application consisted of 2 distinct parts communicating over TCP in the local network.
 \secc Server
-The server component was expected to be run at static IP address "192.168.2.4".This part of the application was responsible for reading, parsing, and converting the execution file into the grid coordinate system used by robots. Another of its responsibilities included handling connections from individual robots. Once connection to all robots have been established, the server would start sending individual commands to each robot, ensuring the order and timing of executed commands.
+The server component was expected to be run at static IP address "192.168.2.4".This part of the application was responsible for reading, parsing, and converting the execution file into the grid coordinate system used by robots. Another of its responsibilities included handling the connections from individual robots. Once connection to all robots have been established, the server would start sending individual commands to each robot, ensuring the order and timing of executed commands.
 \secc Robots
 The base of the software running on robots consists of ROS package, module responsible for navigation on the grid and simple communication layer executing commands received from the server. The robots were only responsible for executing the individual commands, and had no context of the whole simulation, or other robots.
 \sec Server software analysis
