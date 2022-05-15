@@ -30,7 +30,7 @@ Commands for robots:
 ./ciirc-exec.sh robots:stop
 \endtt
 
-The script is intended to reduce the time necessary for the setup and automates most of the initial setup tasks had to be done manually before. \br
+The script is intended to reduce the time necessary for the setup and automates most of the initial setup tasks that had to be done manually before. \br
 Commands starting with server: are connecting to the server through ssh and performing actions remotely. \br
 Commands starting with robots: are connecting directly to robots as defined in "/robot_definitions.txt" and performing actions using the defined credentials. \br The :update script command updates the server and robots, respectively, from git while using the supplied ssh keys. It also automatically fixes file permissions required to run and build the. The ssh keys are first automatically copied to each device using scp. \br
 There are additional scripts for verifying the network connectivity, which proved to be very helpful when eliminating possible bug sources, that in many cases led to the network connectivity. \br
