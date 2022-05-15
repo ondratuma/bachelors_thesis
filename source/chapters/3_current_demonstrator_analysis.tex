@@ -43,7 +43,7 @@ The navigation part proved to be well written and abstracted away the navigation
 \enditems
 The internal representation of the grid can be seen below in figure ~\ref[robot_grid]. All robot movement is calculated and realized relatively to this grid representation. The numbers on the individual grid tiles are embedded in the QR codes on the laboratory floor and are the ids of the nodes in the "Projekt_mapa4.xml" file. X represents a missing node/obstacle.
 \robotGrid
-As an additional safety measure, the underlying software abstracts away direct collision handling, during which the robot stops all further execution, to prevent any potential damage.
+As an additional safety measure, the underlying software abstracts away direct collision handling, during which the robot stops all further execution to prevent any potential damage.
 
 \secc Runner
 The runner consisted of a simple communication handler, calling the above-mentioned navigation API, performing the desired tasks, and returning the results. In case of not finishing the command, the robot would simply not send back the response, and the server would then reinitiate the command execution.
