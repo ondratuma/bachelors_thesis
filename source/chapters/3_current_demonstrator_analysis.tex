@@ -32,7 +32,7 @@ The server component was expected to be run at static IP address "192.168.2.4".T
 The base of the software running on robots consists of a ROS package, a module responsible for navigation on the grid, and a simple communication layer executing the commands received from the server. The robots were only responsible for executing the individual commands and had no context of the whole simulation or other robots.
 \sec Server software analysis
 The software structure was split into the server runner thread and serializable classes representing the individual messages. Other utility classes for time synchronization were also used, although their impact was negligible. The communication with robots happened in a loop in the server thread.\br
-During a later stage, there were found some rather critical bugs in the NanoMsg abstraction used by both the server and client that resulted in an array out of bounds write and corruption of the stack when the server's IP address length increased. This did not however affect the original project, as the server IP was static and relatively short.
+During a later stage, there were found some rather critical bugs in the NanoMsg abstraction used by both the server and client that resulted in an array out of bounds write and corruption of the stack when the server's IP address length increased. This did not, however, affect the original project, as the server IP was static and relatively short.
 \sec Robot software analysis
 \label[position_api]
 \secc Navigation
