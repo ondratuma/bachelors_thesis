@@ -49,5 +49,5 @@ As an additional safety measure, the underlying software abstracts away direct c
 The runner consisted of a simple communication handler, calling the above-mentioned navigation API, performing the desired tasks, and returning the results. In case of not finishing the command, the robot would simply not send back the response, and the server would then reinitiate the command execution.
 
 \sec Runtime behavior
-The runtime behavior is consistent and reliable in its main functionality, that is inherently limited by the purpose of the software.\br
+The runtime behavior is consistent and reliable in its main functionality, which is inherently limited by the purpose of the software.\br
 Due to the multithreaded nature, the server was sometimes logging to stdout multiple logs at a time, resulting in message corruption, but that was a minor inconvenience, that did not affect the executed demonstration in any way.
