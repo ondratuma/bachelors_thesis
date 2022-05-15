@@ -10,7 +10,7 @@ The project consists of 2 parts.
 {\bf The solver} is a standalone {\cmake} application. It generates a simple CLI binary executable that allows the user to generate an execution plan based on a problem definition. It supports multiple planning algorithms that can be switched using the command line arguments. \vfil\break 
 {\bf The visualizer} is based on {\of} and is built using {\makefile}. It is used to visualize the output of the solver once it has been generated. The user is able to change the visualization speed and highlight particular robots.\break 
 \endmulti
-This split is necessary as described in {~\ref[choosing_gui]}. The general workflow is to:
+This split is necessary, as described in {~\ref[choosing_gui]}. The general workflow is to:
 \begitems \style n
     * Run the solver on a problem set as described in {~\ref[mapfir_solver_input]}, creating output in the format described in {~\ref[mapfir_solver_output_format]} 
     * Visualize the solution using the visualizer {~\ref[mapfir_visualizer]}
