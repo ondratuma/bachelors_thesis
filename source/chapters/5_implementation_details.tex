@@ -10,7 +10,7 @@ All communication in the built system is based on an abstract interface built up
 The main classes used for communication are Messenger\label[messenger]\wlabel{} (asynchronous handler for inbound/outbound messages) and Message (serializable container), providing an easy-to-use interface and abstracting the network layer away from the programmer. The basic hierarchy of used communication classes is illustrated below.
 \communicationUml
 \break
-server and frontend each have their own instance of Messenger associated with given Message type, communicating through API defined by a given messenger. In the case of SynchronizedStateMessenger, only the latest version of the synchronized state is publicly available outside of the class.
+Server and frontend each have their own instance of Messenger associated with given Message type, communicating through API defined by a given messenger. In the case of SynchronizedStateMessenger, only the latest version of the synchronized state is publicly available outside of the class.
 
 The asynchronous nature of the communication can be seen in the sequence diagram below.
 
