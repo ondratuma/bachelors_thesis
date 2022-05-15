@@ -6,7 +6,7 @@ The original project was developed as part of the {\safeLog}, which aimed to stu
 \sec Input format
 All data-related input and output files used in the original project are XML-based. The XML format has numerous advantages for advanced use-cases that need more metadata, but at the same time, it is hard to read by human operators and its parsing, as currently implemented, is overly complicated.
 \secc Map file
-The map file "Projekt_mapa4.xml" in the root of the directory was used as the source for the navigation system on robots. The file is in XML format and consists of a relatively simple definition of nodes that are directly referred to by id from the QR codes placed on the laboratory floor. The rest of the map file was unused but kept for possible backward compatibility. It includes edges definition, describing the possible routes.
+The map file "Projekt_mapa4.xml" in the root of the directory was used as the source for the navigation system on robots. The file is in XML format and consists of a relatively simple definition of nodes that are directly referred to by id from the bar codes placed on the laboratory floor. The rest of the map file was unused but kept for possible backward compatibility. It includes edges definition, describing the possible routes.
 
 \label[fc_coordinate_system]
 \secc{Coordinate system convention}
@@ -43,7 +43,7 @@ The navigation part proved to be well written and abstracted away the navigation
     * "int driveToPosition(double x, double y, double time);"
     * "int turn (double angle);"
 \enditems
-The internal representation of the grid can be seen below in Figure ~\ref[robot_grid]. All robot movement is calculated and realized relatively to this grid representation. The numbers on the individual grid tiles are embedded in the QR codes on the laboratory floor and are the ids of the nodes in the "Projekt_mapa4.xml" file. X represents a missing node/obstacle.
+The internal representation of the grid can be seen below in Figure ~\ref[robot_grid]. All robot movement is calculated and realized relatively to this grid representation. The numbers on the individual grid tiles are embedded in the bar codes on the laboratory floor and are the ids of the nodes in the "Projekt_mapa4.xml" file. X represents a missing node/obstacle.
 \robotGrid
 As an additional safety measure, the underlying software abstracts away direct collision handling, during which the robot stops all further execution to prevent any potential damage.
 The underlying solution for the navigation system is based on the AprilTag project. It {\uv {is a visual fiducial system, useful for a wide variety of tasks including augmented reality, robotics, and camera calibration. Targets can be created from an ordinary printer, and the AprilTag detection software computes the precise 3D position, orientation, and identity of the tags relative to the camera. The AprilTag library is implemented in C with no external dependencies. It is designed to be easily included in other applications, as well as be portable to embedded devices. Real-time performance can be achieved even on cell-phone grade processors}}\cite[apriltag]
