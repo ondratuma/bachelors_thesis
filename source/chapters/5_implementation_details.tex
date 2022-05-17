@@ -13,7 +13,7 @@ The main classes used for communication are Messenger\label[messenger]\wlabel{} 
 \break
 The server and frontend each have their own instance of Messenger associated with a given Message type, communicating through API defined by a given messenger. In the case of SynchronizedStateMessenger, only the latest version of the synchronized state is publicly available outside of the class.
 
-The asynchronous nature of the communication can be seen in the sequence diagram \ref[communication_sequence_diagram], where it can be clearly seen how the SynchronizedStateMessenger performs multiple actions and independently synchronizes its state, while the Frontend is free to do other actios.
+The asynchronous nature of the communication can be seen in the sequence diagram \ref[communication_sequence_diagram], where it can be clearly seen how the SynchronizedStateMessenger performs multiple actions and independently synchronizes its state, while the Frontend is free to do other actions.
 
 \communicationSequence
 
@@ -57,6 +57,9 @@ The following ports should be used at runtime.
     * single port for Vicon
     * multiple ports for frontend connections (1 for each message type)
 \enditems
+
+\secc Virtual run
+The virtual run is implemented through a class called RobotConsumer. It is started by providing the CLI option "--robot-consumers". It runs in its own threads, and from the server's perspective, should be indistinguishable from real robots. It automatically creates sockets for each robot, allowing the server to initiate communication, and then periodically send its position back to server. The position used is the position of last command, if not command is currently being executed. The execution of a command is set up in a way, that it takes a random amount of time between 1 and 5 seconds, and is preformed linearly, meaning that the perceived speed of the robot is constant. During the command execution, the consumer periodically broadcasts its position every 100ms. The position during execution changes with the progress of the command linearly between the start and end location.
 
 \sec Graphical user interface
 The GUI is implemented using {\of}. It runs a single thread for main logic and event handling and another one for the GUI application. Communication with the server is directed through the Messenger abstraction, allowing uninterrupted handling of all events that might arise and providing smooth rendering for the application. All synchronous events and rendering happen in the main event loop of {\of}, providing a centralized state for the whole component.
