@@ -4,7 +4,7 @@ In this chapter, I will describe my implementation and the particular solutions 
 
 \sec Application architecture
 The application is split between a server, a frontend, and a robot part.
-The Server is a central part of the project, communicating with the frontend and the robots. The robots and the frontend communicate only with the server and are completely independent of each other.
+The server is a central part of the project, communicating with the frontend and the robots. The robots and the frontend communicate only with the server and are completely independent of each other.
 \secc Communication
 All communication in the built system is based on an abstract interface built upon the same layer on top of \nanomsg, that has beed used in the original project. This abstraction greatly simplifies the introduction of new message types and the general process of sending/receiving messages and synchronizing a global state.\br
 
