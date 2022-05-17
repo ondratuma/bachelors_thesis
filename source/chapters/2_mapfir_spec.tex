@@ -6,7 +6,7 @@ In this chapter, I will take a detailed look at the inner workings of the {\mapf
 {\mapfIR} is a simulator and visualizer of Multi-Agent Path Finding (MAPF). It is written in C++(17). Its main appeal for us is the ease of use and the usage of human-readable input and output formats that are generally easy to understand.\br\br
 The project consists of 2 parts.
 \begitems \style x
-    * {\bf The solver} is a standalone {\cmake} application. It generates a simple CLI binary executable that allows the user to generate an execution plan based on a path-finding problem definition. It supports multiple planning algorithms that can be switched using the command-line arguments.
+    * {\bf The solver} is a standalone {\cmake} application. It generates a simple CLI binary executable that allows the user to generate an execution plan based on a pathfinding problem definition. It supports multiple planning algorithms that can be switched using the command-line arguments.
     * {\bf The visualizer} is based on {\of} (openFrameworks) and is built using {\makefile}. It is used to visualize the output of the solver once it has been generated. The user is able to change the visualization speed and highlight particular robots.
 \enditems
 This split is necessary, as described in Section {~\ref[choosing_gui]}. The general workflow is to:
@@ -25,7 +25,7 @@ Hierarchical Cooperative A* and Windowed Hierarchical Cooperative A* \cite[Silve
 
 \label[mapfir_solver_input]
 \secc{Input format}
-The input is description of the path-finding problem that is given to the solver, which in turn tries to create a solution for given problem set.
+The input is description of the pathfinding problem that is given to the solver, which in turn tries to create a solution for given problem set.
 \ttline 0
 \begtt
 map_file=arena.map
