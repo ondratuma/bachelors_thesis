@@ -45,7 +45,13 @@ The server code resides in the "{projectRoot}/FleetControl/modules/manager" dire
 \secc Vicon
 The laboratory is equipped with a {\vicon} motion capture system, monitoring the area spanned by robots completely. The purpose of the system is to provide positions of defined known objects.\br
 The system consists of a central server and high refresh rate motion cameras emplaced on the ceiling of the laboratory around the monitored area.
-The Vicon system is usually used in the movie industry, but is by no means limited to it.
+The Vicon system is usually used in the movie industry, but is by no means limited to it.\br
+The tracking works by placing special tracking markers, as can be seen on Figure \ref[vicon_markers], and mapping each marker constellation to an identifier in the Vicon software. The system then automatically tracks the position, rotation and speed of each marker constellation.
+\midinsert
+\clabel[vicon_markers]{Communication sequence diagram}
+\picw=14.5cm \cinspic {../assets/images/communication_sequence_diagram.png}
+\caption/f Communication sequence diagram
+\endinsert
 Additional tooling is used to transform the source data from the {\vicon} system into a network stream that can be consumed by other applications running on the local network.\br
 The actual usage in the server is then relatively straightforward. Each robot is assigned a name in the {\vicon} system that is referenced in the file with robot definitions in the root of the project. Afterward, when the {\vicon} system is running, we are able to transform the output data into a continuous stream of data, send it over the network to the Server, filter out only wanted objects, and save the current position provided by {\vicon} for each robot. The final position for each robot is periodically transferred to the frontend primarily to save network bandwidth. But given the high refresh rate of the positioning system and the relatively low speed of physical robots, the updating period was set to 100ms without any noticeable delay in the user interface.
 
