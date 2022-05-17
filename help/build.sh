@@ -12,7 +12,7 @@ else
    OUTPUT_FILE=bakalarska_prace
 fi
 
-cd build && pdfcsplain -halt-on-error "$ROOT_FILE" && mv "${ROOT_FILE}.pdf" ../output/temp.pdf && ps2pdf -dEPSCrop -dPrinted=false ../output/temp.pdf ../output/"$OUTPUT_FILE.pdf" && cd ..
+cd build && pdfcsplain -halt-on-error "$ROOT_FILE" && mv "${ROOT_FILE}.pdf" ../output/temp.pdf && gs -dPDFSETTINGS=/ebook -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPrinted=false -o ../output/"$OUTPUT_FILE.pdf" ../output/temp.pdf && cd ..
 
 git add .
 git commit -m "date"
