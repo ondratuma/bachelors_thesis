@@ -13,7 +13,7 @@ The main classes used for communication are Messenger\label[messenger]\wlabel{} 
 \break
 The server and frontend each have their own instance of Messenger associated with a given Message type, communicating through API defined by a given messenger. In the case of SynchronizedStateMessenger, only the latest version of the synchronized state is publicly available outside of the class.
 
-The asynchronous nature of the communication can be seen in the sequence diagram \ref[communication_sequence_diagram].
+The asynchronous nature of the communication can be seen in the sequence diagram \ref[communication_sequence_diagram], where it can be clearly seen how the SynchronizedStateMessenger performs multiple actions and independently synchronizes its state, while the Frontend is free to do other actios.
 
 \communicationSequence
 
