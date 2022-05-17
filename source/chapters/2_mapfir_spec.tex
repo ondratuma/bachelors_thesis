@@ -42,7 +42,7 @@ max_comp_time=30000
 \endtt
 \ttline -1
 
-The input format is illustrated above. The file starts with the name of a map file on the first line, continuing with the number of agents on the second line, followed by the seed of the problem, "max_timestep", and "max_comp_time". The seed is used to preserve the information about how to problem was generated and enable its regeneration. The "max_timestep" gives us the information about the total number of time steps in a given simulation. The "max_comp_time" is used for debugging and performance monitoring, and will not be important for the purpose of this thesis.
+The input format is illustrated above. The file starts with the name of a map file on the first line, continuing with the number of agents on the second line, followed by the seed of the problem, "max_timestep", and "max_comp_time". The seed is used to preserve the information about how to problem was generated and enable its regeneration. The "max_timestep" gives us the information about the total number of time steps in the simulation. The "max_comp_time" is used for debugging and performance monitoring, and will not be important for the purpose of this thesis.
 The next \uv{number of agents} lines are in the format $s_x$ $s_y$ $g_x$ $g_y$ where $s_x$ and $s_y$ are the x and y coordinates of the starting point, respectively, and $g_x$, $g_y$ are the x and y coordinates of the goal, respectively. 
 
 \label[mapfir_solver_output_format]
