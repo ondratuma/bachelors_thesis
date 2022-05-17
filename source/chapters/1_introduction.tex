@@ -2,7 +2,7 @@
 The general motivation for this thesis is the development of autonomous systems, planning algorithms, and the testing necessary to evaluate their properties in real conditions and their demonstration to interested parties.
 \br
 \br
-The goal of this thesis is to improve the software for autonomous warehouse demonstrations currently used by the Intelligent and Mobile Robotics Group (IMR) at CIIRC. 
+The goal of this thesis is to improve the software for autonomous warehouse demonstrations currently used by the Intelligent and Mobile Robotics Group (IMR) at CIIRC and incorporate the formats used by the {\mapfIR} project (Described in {\link[ref:chap_2]{\Black}{\it Chapter 2}}).
 
 \sec Current state
 Currently, the IMR is operating a demonstrator of autonomous warehouse robots. The demonstrator is part of the {\oldRepo}. The version currently used is hard to set up, supports only a proprietary format, and creates additional friction in the workflow. Moreover, the demonstrator output is text-only, making it generally unappealing to work with. It enables only basic functionality for the simulations, which mainly include:
@@ -14,7 +14,7 @@ Currently, the IMR is operating a demonstrator of autonomous warehouse robots. T
 
 It does the basics necessary to run the simulation, but it does not enable the user to adjust or view the result. The information flow is limited, as the only information relevant to the execution is the feedback from robots after command execution. It has no continuous data about real-world positions. If a collision happens between two robots, the executor has no way of detecting and adjusting the robot's paths.
 
-The current data representation format is XML-based. It is not compatible with {\mapfIR}'s input nor output format (Described in {\link[ref:chap_2]{\Black}{\it Chapter 2}}), which makes the software at its current state useless for students developing algorithms for the {\mapfIR} solver. 
+The current data representation format is XML-based. It is not compatible with {\mapfIR}'s input nor output format, which makes the software at its current state useless for students developing algorithms for the {\mapfIR} solver. 
 
 Another disadvantage is the substantial amount of work and knowledge required to set up a basic demonstration run. This substantially limits the possible use-cases for this project, as the setup takes significantly more time than the actual demonstration run. By making the setup process more straightforward, the project could be used more often, increasing its perceived usefulness and likely increasing its chances of getting future updates.
 
