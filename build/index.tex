@@ -19,16 +19,18 @@
 \input ../source/chapters/6_system_properties
 \input ../source/chapters/7_summary
 \app {Contents of the attached CD}
-\midinsert
-
-    \ctable{llp{8cm}}{
-        \hfil Directory & & Description \crl \tskip4pt
-        demonstrator & & {Complete sources for the demonstrator including the server, frontend, robots, and additional scripts.} \cr
-        & FleetControl & Code used by server and frontend \cr
-        & src & Code used by robots \cr
-    }
-\caption/t Directory structure.
-\endinsert
+\dirtree{%
+.1 /.
+.2 bin.
+.2 home.
+.3 jeancome.
+.4 texmf.
+.5 tex.
+.3 jeancomeson\DTcomment{Guillaume}.
+.3 jeancomedaughter\DTcomment{Mathilde}.
+.2 usr.
+.3 bin.
+}
 \nextoddpage
 
 \bibchap
