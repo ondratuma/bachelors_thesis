@@ -39,6 +39,7 @@ PAGE_TEXT=""
 x=1
 TEXT=$(pdftotext "output/${OUTPUT_FILE}.pdf" -)
 PAGE_COUNT_TOTAL=$(pdftk output/"${OUTPUT_FILE}.pdf" dump_data | grep NumberOfPages | awk -F ' ' '{print $2}')
+echo $TEXT > output/"${OUTPUT_FILE}.txt"
 ORIGINAL_FILE_SIZE=$(du -h "output/${OUTPUT_FILE}.pdf" | awk -F ' ' '{print $1}')
 PRINT_FILE_SIZE=$(du -h "output/${OUTPUT_FILE}_print.pdf" | awk -F ' ' '{print $1}')
 
