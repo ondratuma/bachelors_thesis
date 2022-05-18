@@ -13,7 +13,7 @@ The main classes used for communication are Messenger\label[messenger]\wlabel{} 
 \break
 The server and frontend each have their own instance of Messenger associated with a given Message type, communicating through API defined by a given messenger. In the case of SynchronizedStateMessenger, only the latest version of the synchronized state is publicly available outside of the class.
 
-The asynchronous nature of the communication can be seen in the sequence diagram \ref[communication_sequence_diagram], where it can be clearly seen how the SynchronizedStateMessenger performs multiple actions and independently synchronizes its state, while the Frontend is free to do other actions.
+The asynchronous nature of the communication can be seen in the sequence diagram in Figure {\ref[communication_sequence_diagram]}, where it can be clearly seen how the SynchronizedStateMessenger performs multiple actions and independently synchronizes its state, while the Frontend is free to do other actions.
 
 \communicationSequence
 
@@ -30,8 +30,7 @@ It acts on the instructions by using the position API provided by the underlying
 TurtleBot software is built using CMake.
 The sources for the TurtleBot are in the "/src" directory, where the actual code resides in the "/src/agv_package/TurtleBot/" directory.
 
-All relevant application information about robots has been moved to a single place. It is in a file named "robot_definitions.txt" in the root of the project. Description of each robot consists of its ID,  IP address, port used for command reception/acknowledgment, ssh_user used for direct connections, name registered in the Vicon system and color displayed in the user interface.
-This file is used by the command-line utilities, the server, and the robots themselves, providing a single source of truth.
+
 
 At runtime, the TurtleBot uses the following ports.
 \begitems \style x

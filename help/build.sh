@@ -1,3 +1,5 @@
+set -e
+
 args=()
 
 presentation="0"
