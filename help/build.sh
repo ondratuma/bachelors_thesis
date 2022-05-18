@@ -12,8 +12,14 @@ else
    OUTPUT_FILE=bakalarska_prace
 fi
 
-cd build && pdfcsplain -halt-on-error "$ROOT_FILE" && pdfcsplain -halt-on-error "$ROOT_FILE" && pdfcsplain -halt-on-error "$ROOT_FILE" && mv "${ROOT_FILE}.pdf" ../output/temp.pdf && cp ../output/temp.pdf  ../output/"$OUTPUT_FILE.pdf" && cd ..
-# gs -dPDFSETTINGS=/screen -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -dCompatibilityLevel=1.7 -dPrinted=false -o ../output/"$OUTPUT_FILE.pdf" ../output/temp.pdf
+cd build
+pdfcsplain -halt-on-error "$ROOT_FILE" 
+pdfcsplain -halt-on-error "$ROOT_FILE" 
+pdfcsplain -halt-on-error "$ROOT_FILE" 
+mv "${ROOT_FILE}.pdf" ../output/temp.pdf
+cp ../output/temp.pdf  ../output/"$OUTPUT_FILE.pdf" 
+cd ..
+gs -dPDFSETTINGS=/screen -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -dCompatibilityLevel=1.7 -dPrinted=false -o ../output/"$OUTPUT_FILE_print.pdf" ../output/temp.pdf
 
 if [ $presentation == "1" ]; then
    echo "Done"
