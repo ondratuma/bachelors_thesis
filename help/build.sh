@@ -40,6 +40,7 @@ x=1
 TEXT=$(pdftotext "output/${OUTPUT_FILE}.pdf" -)
 PAGE_COUNT_TOTAL=$(pdftk output/"${OUTPUT_FILE}.pdf" dump_data | grep NumberOfPages | awk -F ' ' '{print $2}')
 ORIGINAL_FILE_SIZE=$(du -h "output/${OUTPUT_FILE}.pdf" | awk -F ' ' '{print $1}')
+PRINT_FILE_SIZE=$(du -h "output/${OUTPUT_FILE}_print.pdf" | awk -F ' ' '{print $1}')
 
 while  [[ ! $PAGE_TEXT =~ .*Chapter.* ]]
 do
@@ -79,6 +80,7 @@ echo "------------------------------------"
 echo "Znaků textu              : $NUMBER_OF_CHARS"
 echo "Normostrany              : $NORMOSTRAN"
 echo "Velikost souboru         : $ORIGINAL_FILE_SIZE"
+echo "Velikost souboru k tisku : $PRINT_FILE_SIZE"
 
 
 
