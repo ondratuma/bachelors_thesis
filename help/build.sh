@@ -15,13 +15,13 @@ fi
 cd build && pdfcsplain -halt-on-error "$ROOT_FILE" && pdfcsplain -halt-on-error "$ROOT_FILE" && pdfcsplain -halt-on-error "$ROOT_FILE" && mv "${ROOT_FILE}.pdf" ../output/temp.pdf && cp ../output/temp.pdf  ../output/"$OUTPUT_FILE.pdf" && cd ..
 # gs -dPDFSETTINGS=/screen -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -dCompatibilityLevel=1.7 -dPrinted=false -o ../output/"$OUTPUT_FILE.pdf" ../output/temp.pdf
 
-git add .
-git commit -m "date"
-
 if [ $presentation == "1" ]; then
    echo "Done"
    exit
 fi
+
+git add .
+git commit -m "date"
 
 if [[ ! -f "output/${OUTPUT_FILE}.pdf" ]] ; then
     echo file does not exists.
