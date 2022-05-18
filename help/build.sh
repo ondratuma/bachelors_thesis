@@ -12,7 +12,7 @@ else
    OUTPUT_FILE=bakalarska_prace
 fi
 
-rf -rf output/*
+rm -rf output/*
 cd build
 pdfcsplain -halt-on-error "$ROOT_FILE" 
 pdfcsplain -halt-on-error "$ROOT_FILE" 
