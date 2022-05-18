@@ -787,7 +787,7 @@
    \centerline{\setbox0=\table{#1}{#2}%
    \rlap{\locc\liBlue \tmpdim=\ht0 \advance\tmpdim by3pt
    \ifdim\dp0>3pt \dimen0=\dp0 \advance\dimen0 by3pt \else \dimen0=5pt\fi
-   \vrule width=15cm height\tmpdim depth\dimen0\Black}\box0}\nobreak\medskip
+   \vrule width\wd0 height\tmpdim depth\dimen0\Black}\box0}\nobreak\medskip
 }
 \def\tabiteml{\indent}\def\tabitemr{\indent}
 
