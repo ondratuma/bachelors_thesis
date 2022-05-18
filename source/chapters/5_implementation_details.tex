@@ -30,6 +30,8 @@ It acts on the instructions by using the position API provided by the underlying
 TurtleBot software is built using CMake.
 The sources for the TurtleBot are in the "/src" directory, where the actual code resides in the "/src/agv_package/TurtleBot/" directory.
 
+All relevant application information about robots has been moved to a single place. It is in a file called "robot_definitions.txt" in the root of the project. Description of each robot consists of its ID,  IP address, port used for command reception/acknowledgment, ssh_user used for direct connections, name registered in the Vicon system and color displayed in the user interface.
+
 At runtime, the TurtleBot uses the following ports.
 \begitems \style x
     * single port defined in "/robot_definitions.txt" - server commands handling
