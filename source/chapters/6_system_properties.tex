@@ -12,24 +12,24 @@ In the original system, the developer was required to manually connect to each r
 In the new system, the preferred way to run the demonstration is through the shell script "ciirc-exec.sh" in the project root.
 Commands interacting with the server are:
 \begitems \style x
-    * {./ciirc-exec.sh server:init} - performs initial cloning of the repository
-    * {./ciirc-exec.sh server:update} - performs a hard reset of the tracked branch and pulls the latest changes from the VCS on the server, and fixes permissions for executable files.
-    * {./ciirc-exec.sh server:build} - builds the software on the server machine.
-    * {./ciirc-exec.sh server:start} - starts the server software
-    * {./ciirc-exec.sh server:stop} - stops the server software
-    * {./ciirc-exec.sh server:ssh} - opens an interactive shell in the root of the project on the server
+    * server:init - performs initial cloning of the repository
+    * server:update - performs a hard reset of the tracked branch and pulls the latest changes from the VCS on the server, and fixes permissions for executable files.
+    * server:build - builds the software on the server machine.
+    * server:start - starts the server software
+    * server:stop - stops the server software
+    * server:ssh - opens an interactive shell in the root of the project on the server
 \enditems
 
 Commands interacting with the robots are:
 \begitems \style x
-    * {./ciirc-exec.sh robots:ssh <robotId>} - opens an interactive shell in the root of the project on the robot
-    * {./ciirc-exec.sh robots:init <robotId>} - performs initial cloning of the repository
-    * {./ciirc-exec.sh robots:update <robotId>} -  performs a hard reset of the tracked branch and pulls the latest changes from the version control system (VCS) on the robot, and fixes permissions for executable files.
-    * {./ciirc-exec.sh robots:update:all} - executes "./ciirc-exec.sh robots:update <robotId>" for all available robots.
-    * {./ciirc-exec.sh robots:inspect <robotId>} - connects to a running tmux session on the robot
-    * ./ciirc-exec.sh robots:start <robotId> - starts the robot software
-    * {./ciirc-exec.sh robots:start:all} - performs "./ciirc-exec.sh robots:start <robotId>" for all available robots.
-    * {./ciirc-exec.sh robots:stop} - stops the software running on all robots.
+    *  robots:ssh <robotId> - opens an interactive shell in the root of the project on the robot
+    * { robots:init <robotId>} - performs initial cloning of the repository
+    * { robots:update <robotId>} -  performs a hard reset of the tracked branch and pulls the latest changes from the version control system (VCS) on the robot, and fixes permissions for executable files.
+    * { robots:update:all} - executes " robots:update <robotId>" for all available robots.
+    * { robots:inspect <robotId>} - connects to a running tmux session on the robot
+    *  robots:start <robotId> - starts the robot software
+    * { robots:start:all} - performs " robots:start <robotId>" for all available robots.
+    * { robots:stop} - stops the software running on all robots.
 \enditems
 
 The script is intended to reduce the time necessary for the setup and automates most of the initial setup tasks that had to be done manually before. \br
