@@ -59,7 +59,14 @@ These particular robots are equipped with a Kinect sensor on the front, as can b
 The robot is running the Robot Operating System (ROS). ROS \cite[ros_website] is a set of software libraries and tools for building robot applications, providing advanced algorithms and complete framework for working with robots. The base of the software running on robots consists of a ROS package, a module responsible for navigation on the grid, and a simple communication layer executing the commands received from the server. This layer will be referred to as "runner" in the rest of this thesis. The robots were only responsible for executing the individual commands and had no context of the whole simulation or other robots.
 
 \sec Environment
-The laboratory is in a room with the grid layed on the ground, covering roughly 10m by 10m area.
+The laboratory is in a room with the grid layed on the ground, covering roughly 10m by 10m area as can be seen in Figure \ref[complete_area]. 
+
+\midinsert
+\clabel[complete_area]{Complete area}
+\picw=14cm \cinspic {../assets/images/complete_area.jpg}
+\caption/f Complete area
+\endinsert
+
 
 \sec Server software analysis
 The software structure was split into the server runner thread and serializable classes representing the individual messages. Other utility classes for time synchronization were also used, although their impact was negligible. The communication with robots happened in a loop in the server thread.\br
