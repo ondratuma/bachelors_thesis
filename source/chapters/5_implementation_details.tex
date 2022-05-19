@@ -6,7 +6,7 @@ In this chapter, I will describe my implementation and the particular solutions 
 The application is split between a server, a frontend, and a robot part.
 The server is a central part of the project, communicating with the frontend and the robots. The robots and the frontend communicate only with the server and are completely independent of each other.
 \secc Communication
-All communication in the built system is based on an abstract interface built upon the same layer on top of {\nanomsg} that has been used in the original project. This abstraction greatly simplifies the introduction of new message types and the general process of sending/receiving messages and synchronizing a global state.\br
+All communication in the built system is based on an abstract interface built upon the same layer on top of {\nanomsg} that has been used in the original project. This abstraction greatly simplifies the introduction of new message types and the general process of sending/receiving messages and synchronizing a global state.
 
 The main classes used for communication are Messenger\label[messenger]\wlabel{} (asynchronous handler for inbound/outbound messages) and Message (serializable container), providing an easy-to-use interface and abstracting the network layer away from the programmer. The basic hierarchy of used communication classes is illustrated below.
 \communicationUml
