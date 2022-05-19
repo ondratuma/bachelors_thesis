@@ -21,17 +21,16 @@ with the only downside being its dependence on the \makefile. Therefore we are n
 The developers are rather defensive about migrating build systems. The recommended way of building {\of} app is to clone the official repository, create an app using their template, and extend the makefiles provided by the original repository. In order to be able to use this project with \cmake, it would be necessary to fork the original repository and create a header map for each component of the framework, potentially breaking support for unported add-ons.
 This would break the main benefit of the framework, extensibility, while the time investment necessary would certainly overrun the budget for this thesis.
 
-\hfill \break
 There appear to be a few attempts to do this. Unfortunately, the vast majority of them are out of date and unusable without heavy modifications. During the preparation for this thesis, I tried to set up all of them without success, as they are out of date. Below are a few example approaches to this problem.
-
-
 
 The first one being {\ofxCMake}. It attempts to provide the package as {\of} add-on. Unfortunately, the latest version is from Aug 13, 2017, and there seems to be no active development keeping it in sync with current Linux distributions and versions of libraries used in them.
 
 Another one being {\ofnode}, taking a different approach. It has its own fork of the whole {\of} repository, with mappings for {\cmake}. The fork approach introduces inevitable split from the main branch, implicitly keeping it out of sync with no support for new features. \br
-The latest version is from Nov 7, 2018. I ran into several issues with system libraries with this version and was not able to compile even the bare repository.\br\br
+The latest version is from Nov 7, 2018. I ran into several issues with system libraries with this version and was not able to compile even the bare repository.
+
 From the forums, it seems that both approaches had been working for at least a few users for some time. The main issue with both approaches seems to be the development outside of the main repository, which led to their deprecation, as the developers had to maintain it themselves, which both of them stopped doing.
-It was then decided that it would be most beneficial to split the GUI into a separate application and keep using the framework as intended by the authors, as the approach to port it to {\cmake} had been tried before, and as we can see, it did not work in the long term.\br\br
+It was then decided that it would be most beneficial to split the GUI into a separate application and keep using the framework as intended by the authors, as the approach to port it to {\cmake} had been tried before, and as we can see, it did not work in the long term.
+
 The implementation will be, however, done with the possible switch to a single application in mind, trying to abstract most of the communication away from the developer, making the switch relatively easy, were the developers ever to introduce {\cmake} support.
 
 \sec GUI implementation considerations
