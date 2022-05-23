@@ -27,7 +27,7 @@ gs -dPDFSETTINGS=/ebook -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -dCompatibilityLevel
 rm -rf ./output/temp.pdf
 cd ..
 
-if [ $1 == "defense" || $1 == "presentation" ]; then
+if [ [ $1 == "defense" ] || [ $1 == "presentation" ] ]; then
    echo "Done"
    exit
 fi
