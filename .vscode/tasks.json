@@ -4,11 +4,14 @@
         {
           "label": "save",
           "type": "shell",
-          "command": "./help/build.sh defense",
+          "command": "./help/build.sh",
           "presentation": {
             "reveal": "always",
             "panel": "shared"
           },
+          "args": [
+            "defense"
+          ],
           "options": {
             "cwd": "${workspaceFolder}",
             "ContinueOnError": true
