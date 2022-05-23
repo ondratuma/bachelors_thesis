@@ -1,0 +1,147 @@
+\input ctuslides2
+\input ../source/definitions
+\worktype[B/EN]
+\faculty {F3}
+\department {Department of Cybernetics}
+
+\slideshow
+
+\tit {Multiagent planning system demonstrator}
+
+\subtit {Tůma Ondřej}
+
+\pg;
+
+\sec {Task description}
+
+\textit {
+    In collaboration with {\safeLog}, the laboratory demonstrator TurtleBot was created
+    for robot fleet trajectory planning in automated warehouses. The goal of this semestral
+    project is to analyze this framework and improve upon its codebase.
+}
+\begitems
+* Get acquainted with the current state of development of the demonstrator and the simulator for multi-agent planning (https://github.com/Kei18/mapf-IR).
+* Modify the simulator to serve as the basic user interface (GUI) of the demonstrator.
+* Display robot positions obtained from the Vicon system in the GUI
+* Integrate the supplied components for planning and generating plans into the system.
+\enditems
+\nl
+
+\pg;
+
+% SLIDE -----------------------------------------
+
+\sec {Work plan}
+
+Initial stage
+\typosize[14/14]
+\begitems
+* inspected current state
+* inspected mapfIR
+* proposed plan to continue
+\enditems
+
+\pg;
+
+\sec {Work plan}
+
+* Original plan
+\typosize[14/14]
+\begitems
+* enable purely virtual run
+* create GUI (as one app)
+* edit input format
+* edit output format
+* enable output generation in application
+\enditems
+
+* Changed mainly due to incompatibility of openFrameworks
+
+\pg;
+
+\sec {Work plan}
+
+* Changed plan
+\typosize[14/14]
+\begitems
+* improved original app code separation and tooling (1w)
+* enabled purely virtual run (1w)
+* proposed plan to create GUI (1w)
+* tried to merge projects with different build systems (3w)
+* decided to split into multiple applications (1w)
+* prepared tooling and distributed datastructures (1w)
+* implemented GUI (1w)
+* connected both applications (2d)
+* finalized for demo (1d)
+\enditems
+
+\pg;
+
+\pg;
+% SLIDE -----------------------------------------
+
+\sec {Final GUI}
+
+\centerline{\picw=16cm \inspic ../assets/images/fleet_control_user_interface.png }
+
+\pg;
+
+% SLIDE -----------------------------------------
+
+\sec {mapfIR GUI}
+
+\centerline{\picw=14cm \inspic ../assets/images/arena_100agents-1.png }
+
+\pg;
+
+% SLIDE -----------------------------------------
+
+\sec {Shared datastructures}
+
+\centerline{\picw=16cm \inspic ../assets/images/communication_uml.png }
+
+\pg;
+% SLIDE -----------------------------------------
+
+\sec {Communication schema}
+
+\centerline{\picw=16cm \inspic ../assets/images/communication_sequence_diagram.png }
+
+\pg;
+
+% SLIDE -----------------------------------------
+
+\sec {Retrospective}
+
+* Went well
+\typosize[14/14]
+\begitems
+* communication
+* task visibility
+* general application state
+\enditems
+
+* Could have been better
+\typosize[14/14]
+\begitems
+* effort evaluation
+* cleaning original repository and establishing new
+* committing on time basis rather than feature basis
+\enditems
+
+\pg;
+
+
+\sec {Future}
+
+* Possible future steps
+\typosize[14/14]
+\begitems
+* standardize IO formats with mapfIR
+* move to discrete time steps
+* enable generation of plans in application
+* connect Vicon ?
+* enable multiple view terminals connected at once ?
+\enditems
+
+\pg.
