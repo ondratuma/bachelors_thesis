@@ -4,7 +4,7 @@ PDF output will be in /output directory after generation
 
 # generate output pdf
 ```bash
-./help/build.sh
+./help/build.sh defense|presentation|work
 ```
 
 # automatic regeneration
