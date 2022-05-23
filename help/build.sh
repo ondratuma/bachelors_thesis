@@ -2,12 +2,14 @@ set -e
 
 args=()
 
-presentation="0"
-
-if [ $presentation == "1" ]; then
+if [ $1 == "presentation" ]; then
    echo "Generating presentation"
    ROOT_FILE=prezentace_semestralni_projekt
    OUTPUT_FILE=prezentace_semestralni_projekt
+elif [ $1 == "defense" ]; then
+   echo "Generating presentation"
+   ROOT_FILE=obhajoba
+   OUTPUT_FILE=obhajoba
 else
    echo "Generating PDF work"
    ROOT_FILE=index
